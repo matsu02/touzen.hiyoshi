@@ -1,0 +1,69 @@
+/* 年別の日誌と記事一覧。紹介ページと共通の色と文字を使う。 */
+/* 最新記事は、画面幅を問わず写真なしで日付・場所・本文を縦に並べる。 */
+.journal-grid .journal-card{display:flex;flex-direction:column;min-width:0}
+.journal-card .journal-meta{font-size:1.05rem;font-weight:600;line-height:1.6;color:var(--ink);margin-top:0;gap:6px 16px;flex-wrap:wrap;align-items:baseline}
+.journal-card .journal-meta time{white-space:nowrap;font-variant-numeric:tabular-nums}
+.journal-card h3{font-weight:700}
+.journal-years{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line)}
+.journal-years-label{font-size:.85rem;color:var(--muted);margin-right:8px}
+.journal-years>a{display:inline-flex;align-items:center;gap:18px;padding:10px 18px;min-height:46px;border:1px solid #bdcdbb;border-radius:3px;background:var(--paper);font-size:.94rem}
+.journal-years>a small{color:var(--muted);font-size:.75rem}
+.journal-years>a:hover,.journal-years>a[aria-current="page"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.journal-years>a[aria-current="page"] small,.journal-years>a:hover small{color:#d4e2cf}
+.archive-subheading{font-size:1.35rem;margin-bottom:22px}
+.archive-year-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.archive-year-card{display:grid;grid-template-columns:1fr auto;gap:15px 20px;padding:36px;background:var(--mist);border:1px solid var(--line);border-radius:3px;transition:background .2s}
+.archive-year-card:hover{background:#e4eddc}
+.archive-year-number{font-family:var(--serif);font-size:3.3rem;line-height:1.5;color:var(--ink)}
+.archive-year-number small{font-size:1.3rem;margin-left:12px}
+.archive-year-count{align-self:center;font-size:.9rem;color:var(--muted)}
+.archive-year-range{grid-column:1/-1;font-size:.85rem;letter-spacing:.03em;color:var(--muted)}
+.archive-year-more{grid-column:1/-1;display:flex;justify-content:space-between;padding-top:17px;border-top:1px solid #b9cbb5;font-size:.9rem}
+.archive-recent{margin-top:88px}
+.archive-recent h2{font-size:2rem}
+.archive-page{max-width:860px}
+.archive-page h1{font-size:clamp(1.6rem,4vw,2rem);line-height:1.7}
+.archive-toc{margin-top:36px}
+.archive-toc h2,.archive-articles>h2{font-size:1.4rem;line-height:1.7;margin-bottom:18px;letter-spacing:.03em}
+.archive-toc ul{list-style:none;padding:0;margin:0}
+.archive-toc li a{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 24px;padding:8px 0;font-size:1rem;line-height:1.9;overflow-wrap:anywhere}
+.archive-toc li a:hover{text-decoration:underline;text-underline-offset:4px}
+.archive-toc time{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.archive-articles{margin-top:60px;min-width:0}
+.archive-articles>h2{padding-bottom:16px;border-bottom:1px solid var(--line)}
+.archive-entry{padding:24px 0 36px;scroll-margin-top:18px}
+.archive-entry+.archive-entry{border-top:1px solid var(--line);padding-top:36px}
+.archive-entry-header{margin-bottom:20px}
+.archive-entry-date{font-size:1rem;line-height:1.9;color:var(--ink);overflow-wrap:anywhere}
+.archive-entry-date strong{font-weight:700}
+.archive-entry-date time{white-space:nowrap;font-variant-numeric:tabular-nums}
+.archive-entry-header h3{font-size:1.2rem;line-height:1.8;margin-top:8px;overflow-wrap:anywhere}
+.archive-entry .article-body{font-size:1rem;overflow-wrap:anywhere}
+.practice-items{padding-left:1.5em;margin:1.4em 0;font-size:1rem;line-height:2.1}
+.practice-items li+li{margin-top:.3em}
+.archive-entry .article-body p+p{margin-top:1.4em}
+.archive-bottom{margin-top:55px}
+.archive-bottom>.text-link{margin-top:25px}
+@media(max-width:1000px){
+  .archive-year-card{padding:25px;gap:13px}
+  .archive-year-number{font-size:2.8rem}
+}
+@media(max-width:760px){
+  .journal-years{gap:10px;margin-top:28px;padding-top:21px}
+  .journal-years-label{width:100%}
+  .journal-years>a{padding:10px 14px;gap:12px}
+  .archive-year-grid{grid-template-columns:1fr;gap:18px}
+  .archive-year-card{padding:25px}
+  .archive-recent{margin-top:60px}
+  .archive-recent h2{font-size:1.7rem}
+  .archive-toc li a{grid-template-columns:1fr;gap:0;padding:10px 0}
+  .archive-articles{margin-top:44px}
+  .archive-entry{padding-bottom:28px}
+  .archive-entry+.archive-entry{padding-top:28px}
+}
+@media print{
+  .journal-years,.archive-bottom{display:none}
+  .archive-page{max-width:none}
+  .archive-toc li,.archive-entry-header{break-inside:avoid}
+  .archive-entry-header{break-after:avoid}
+}
