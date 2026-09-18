@@ -117,7 +117,7 @@
   border-radius: 3px;
 }
 .method-item[open] + .method-image { display: block; }
-.method-image > img { width: 100%; height: auto; border-radius: inherit; }
+.method-image > img { width: 100%; height: auto; object-fit: contain; border-radius: inherit; }
 .method-image > figcaption { margin-top: 12px; font-size: .875rem; line-height: 1.8; }
 .method-image > figcaption > strong { display: block; }
 .method-biography { display: block; margin-top: 8px; font-size: .75rem; line-height: 1.85; }
@@ -174,6 +174,13 @@
   .portrait-photo { min-height: 0; max-height: 352px; }
   .method-row .method-content { padding-right: 6px; }
   .method-image { grid-column: 1; grid-row: auto; width: min(200px, 100%); margin-block: 0 26px; justify-self: center; }
+  .method-image > img {
+    width: auto;
+    height: auto;
+    max-width: min(160px, 100%);
+    max-height: 220px;
+    margin-inline: auto;
+  }
   .home-sections h2.section-title { font-size: 1.85rem; letter-spacing: .045em; }
   .introduction-message-title,
   .introduction-subheading { font-size: clamp(.8125rem, 3.5vw, 1.3rem); }
