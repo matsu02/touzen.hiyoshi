@@ -70,6 +70,22 @@
     document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
     window.matchMedia('(min-width: 1001px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
   }
+  // 写真を開閉領域の中に保ちつつ、PCでは見出しの上端に揃える。
+  all('.method-item').forEach(details => {
+    const summary = query('summary', details);
+    const title = query('.method-title', details);
+    const expanded = query('.method-expanded', details);
+    if (!summary || !title || !expanded) return;
+    const alignPhoto = () => {
+      if (!details.open) return;
+      const offset = title.getBoundingClientRect().top - expanded.getBoundingClientRect().top;
+      details.style.setProperty('--method-image-offset', `${offset}px`);
+    };
+    details.addEventListener('toggle', alignPhoto);
+    if ('ResizeObserver' in window) new window.ResizeObserver(alignPhoto).observe(summary);
+    else window.addEventListener('resize', alignPhoto);
+    alignPhoto();
+  });
   all('.close-details').forEach(button => button.addEventListener('click', () => {
     const details = button.closest('details');
     if (!details) return;
