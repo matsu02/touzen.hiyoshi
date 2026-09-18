@@ -53,6 +53,13 @@
 .schedule-section .visit-info dt { font-size: .78rem; letter-spacing: .05em; }
 .schedule-section .visit-info > h3 { margin-bottom: 20px; font-size: 1.1rem; font-weight: 700; }
 .schedule-section .visit-info dd { font-size: .94rem; line-height: 1.95; }
+.schedule-section .visit-info .visit-venues a {
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.schedule-section .visit-info .visit-venues a:hover { opacity: .7; }
 .schedule-section .visit-info [data-fee-note] { font-size: .85rem; color: var(--body); line-height: 1.8; }
 .schedule-section .visit-info dl > div { padding-block: 17px; }
 .schedule-section .visit-info dl > div:first-child { padding-top: 0; }
