@@ -87,7 +87,7 @@ test('loading resolves to the month and next practice, and selecting a day updat
   await flush();
   assert.equal(page.root.getAttribute('aria-busy'), 'false');
   assert.match(page.title.textContent, /2026年9月29日/);
-  assert.equal(page.details.textContent, '綱島地区センター');
+  assert.equal(page.details.textContent, '＠綱島地区センター');
   assert.equal(page.byClass('practice-calendar__month').textContent, '2026年9月');
   assert.equal(page.root.querySelectorAll('.is-practice').length, 2);
   assert.equal(page.day('2026-09-21'), undefined);

@@ -208,7 +208,8 @@
       title.textContent = dayFormatter.format(next.start);
       const ongoing = next.start <= now ? next.allDay ? '（本日の開催予定）' : '（開催中）' : '';
       const time = next.allDay ? '' : ` / ${eventTime(next)}`;
-      if (nextDetails) nextDetails.textContent = `${next.location || next.title || '会場はGoogleカレンダーをご確認ください'}${time}${ongoing}`;
+      const venue = next.location || next.title;
+      if (nextDetails) nextDetails.textContent = `${venue ? `＠${venue}` : '会場はGoogleカレンダーをご確認ください'}${time}${ongoing}`;
     } else {
       title.textContent = data.state === 'loading' ? '読み込み中…' : data.state === 'ready' ? '取得済みの予定に次回の稽古はありません。' : data.state === 'uninitialized' ? '開催日のデータは準備中です。' : '開催日を読み込めませんでした。';
       if (nextDetails) nextDetails.textContent = data.state === 'loading' ? '' : 'Googleカレンダーで最新の日程をご確認ください。';

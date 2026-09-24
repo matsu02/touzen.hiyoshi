@@ -12,13 +12,13 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23153f36'/%3E%3Ctext x='32' y='46' fill='%23e6edb7' text-anchor='middle' font-family='serif' font-size='42'%3E刀%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/style.css?v=20260918-method-disclosure-2"><link rel="stylesheet" href="assets/journal.css"><link rel="stylesheet" href="assets/hero.css"><link rel="stylesheet" href="assets/schedule.css">
+  <link rel="stylesheet" href="assets/style.css?v=20260918-method-disclosure-2"><link rel="stylesheet" href="assets/journal.css"><link rel="stylesheet" href="assets/hero.css"><link rel="stylesheet" href="assets/schedule.css?v=20260924-next-practice-2">
   <script defer src="assets/site-config.js"></script>
   <script defer src="assets/announcement.js"></script>
   <script defer src="assets/journal-data.js"></script>
   <script defer src="assets/site.js?v=20260918-method-disclosure-2"></script>
   <script defer src="assets/calendar-data.js"></script>
-  <script defer src="assets/calendar.js"></script>
+  <script defer src="assets/calendar.js?v=20260924-venue-prefix-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -67,8 +67,11 @@
         <div class="schedule-grid">
           <div class="calendar-panel">
             <div class="next-practice" aria-live="polite">
-              <p><span class="next-practice-label">次の稽古日：</span><strong data-next-title>カレンダーをご確認ください</strong></p>
-              <p class="next-practice-details" data-next-details></p>
+              <span class="next-practice-label">次の稽古日：</span>
+              <div class="next-practice-info">
+                <p><strong data-next-title>カレンダーをご確認ください</strong></p>
+                <p class="next-practice-details" data-next-details></p>
+              </div>
             </div>
             <div class="calendar-heading"><h3>開催カレンダー</h3><a class="text-link" data-calendar-link href="https://calendar.google.com/calendar/embed?src=289dd5e101d694cb0976ec8f41f5404c6baa88aa47dc00cafab9a34f49f03709%40group.calendar.google.com&amp;ctz=Asia%2FTokyo&amp;mode=MONTH" target="_blank" rel="noopener noreferrer">Googleカレンダー <span aria-hidden="true">↗</span></a></div>
             <div class="practice-calendar" data-practice-calendar><p class="calendar-status">開催日は<a data-calendar-link href="https://calendar.google.com/calendar/embed?src=289dd5e101d694cb0976ec8f41f5404c6baa88aa47dc00cafab9a34f49f03709%40group.calendar.google.com&amp;ctz=Asia%2FTokyo&amp;mode=MONTH" target="_blank" rel="noopener noreferrer">Googleカレンダー</a>でご確認いただけます。</p></div>
