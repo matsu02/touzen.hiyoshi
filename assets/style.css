@@ -186,3 +186,14 @@
   .practice-faq { margin-top: 28px; }
   .practice-lead { padding-top: 22px; margin-bottom: 10px; }
 }
+
+/* 番号付きの項目名は文字を大きくし、番号は小さく添える。 */
+.section-label { align-items: baseline; }
+.section-label-number { flex-shrink: 0; white-space: nowrap; }
+.section-label-text {
+  min-width: 0;
+  font-size: clamp(1.2rem, 2.4vw, 1.75rem);
+  line-height: 1.65;
+  letter-spacing: .05em;
+  color: var(--ink);
+}

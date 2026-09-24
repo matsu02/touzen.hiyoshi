@@ -5,7 +5,19 @@
   grid-template-columns: minmax(0, 1fr);
   margin-bottom: 28px;
 }
-.schedule-title h2 { margin-top: 8px; }
+.schedule-announcement {
+  margin-bottom: 28px;
+  padding: 16px 20px;
+  border-left: 3px solid var(--ink);
+  border-radius: 3px;
+  background: #e6efdd;
+  color: var(--ink);
+  font-size: .94rem;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+.schedule-announcement [data-announcement-text] { white-space: pre-wrap; }
+.schedule-announcement-item + .schedule-announcement-item { margin-top: .75em; }
 .schedule-section .schedule-grid {
   grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
   gap: 28px;
@@ -104,6 +116,7 @@
 @media (max-width: 760px) {
   .home-sections > .schedule-section { padding-top: 28px; }
   .schedule-heading { margin-bottom: 22px; }
+  .schedule-announcement { margin-bottom: 22px; padding: 14px 16px; font-size: .9rem; }
   .schedule-section .schedule-grid { grid-template-columns: 1fr; }
   .schedule-section .calendar-panel,
   .schedule-section .visit-info { padding: 18px; }

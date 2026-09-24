@@ -1,4 +1,7 @@
 /* 年別の日誌と記事一覧。紹介ページと共通の色と文字を使う。 */
+.journal-heading { display: flex; align-items: center; gap: 16px; }
+.journal-heading > .section-label { flex-shrink: 0; }
+.journal-heading > .text-link { margin-top: 0; text-align: right; }
 /* 最新記事は、画面幅を問わず写真なしで日付・場所・本文を縦に並べる。 */
 .journal-grid .journal-card{display:flex;flex-direction:column;min-width:0}
 .journal-card .journal-meta{font-size:1.05rem;font-weight:600;line-height:1.6;color:var(--ink);margin-top:0;gap:6px 16px;flex-wrap:wrap;align-items:baseline}
@@ -49,6 +52,9 @@
   .archive-year-number{font-size:2.8rem}
 }
 @media(max-width:760px){
+  .journal-heading { gap: 12px; }
+  .journal-heading > .section-label { gap: 8px; }
+  .journal-heading > .text-link { font-size: .75rem; gap: 6px; }
   .journal-years{gap:10px;margin-top:28px;padding-top:21px}
   .journal-years-label{width:100%}
   .journal-years>a{padding:10px 14px;gap:12px}
