@@ -17,6 +17,25 @@ Webサイトには、次の内容を掲載しています。
 
 HTML・CSS・JavaScriptで構成し、パソコンとスマートフォンでの閲覧に対応しています。
 
+## 共有サムネイルの設定
+
+`assets/site-config.js` の `thumbnail` で、リンクを共有したときの画像を指定します。初期値は `assets/photos/hero.jpg` です。
+
+```js
+thumbnail: {
+  src: 'assets/photos/hero.jpg',
+  alt: '日吉同好会のイメージ'
+},
+```
+
+画像を `assets/photos/` に置いて `src` を変更し、次のコマンドを実行してください。公開済み画像のHTTP(S) URLも指定できます。
+
+```sh
+node scripts/update-thumbnail.mjs
+```
+
+設定ファイルと、更新されたHTML・テンプレートを一緒にコミット・公開してください。共有先が読み取れるよう、OGP・Twitter Cardの画像指定をHTMLに直接書き込みます。トップページ、日誌、その他の公開ページで共通の画像を使い、日誌を再生成しても設定が維持されます。公開先URLが変わる場合は `siteUrl` も変更してください。
+
 ## アナウンスの設定
 
 `assets/site-config.js` の `announcements` に、表示する最終日と本文の組を追加します。複数ある場合は、`[]` の中にカンマで区切って並べます。

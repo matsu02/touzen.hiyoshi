@@ -1,5 +1,11 @@
-/* アナウンス・写真・申込みフォーム・料金はここで変更できます。写真を用意するまで src は空欄のままで構いません。 */
+/* サムネイル・アナウンス・写真・申込みフォーム・料金はここで変更できます。photos 内の src は、写真を用意するまで空欄のままで構いません。 */
 window.HIYOSHI_CONFIG = {
+  siteUrl: 'https://matsu02.github.io/touzen.hiyoshi/',
+  // 変更後に node scripts/update-thumbnail.mjs を実行し、生成されたHTMLも公開してください。
+  thumbnail: {
+    src: 'assets/photos/hero.jpg',
+    alt: '日吉同好会のイメージ'
+  },
   // この配列にアナウンスを追加します。表示するものがなければ [] にします。
   announcements: [
     {
