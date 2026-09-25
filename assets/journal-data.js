@@ -2125,7 +2125,7 @@ window.HIYOSHI_JOURNAL = [
     "date": "2021-10-12",
     "place": "自由が丘",
     "category": "稽古の記録",
-    "photo": "journal1",
+    "photo": "",
     "title": "ひとつの動きに、積み重ねた稽古がある。",
     "excerpt": "合掌功から歩法、木刀を合わせる稽古へ。基本の積み重ねが、ひとつの動きにつながる過程を確かめました。",
     "href": "journal-2021.html#entry-2021-10-12"
@@ -2135,7 +2135,7 @@ window.HIYOSHI_JOURNAL = [
     "date": "2021-10-05",
     "place": "綱島地区センター",
     "category": "稽古の記録",
-    "photo": "journal2",
+    "photo": "",
     "title": "道具を手がかりに、自分の身体を知る。",
     "excerpt": "木刀がつくる線や面を手がかりに、身体の位置を確認。相手とのやり取りが、自分の感覚を確かめる機会になります。",
     "href": "journal-2021.html#entry-2021-10-05"
@@ -2145,7 +2145,7 @@ window.HIYOSHI_JOURNAL = [
     "date": "2021-09-29",
     "place": "綱島地区センター",
     "category": "稽古の記録",
-    "photo": "journal3",
+    "photo": "",
     "title": "基本の中に、それぞれの発見がある。",
     "excerpt": "初めての方も一緒に、立ち方や合掌功を丁寧に。姿勢の基準と全身のつながりを、動きながら確かめました。",
     "href": "journal-2021.html#entry-2021-09-29"
