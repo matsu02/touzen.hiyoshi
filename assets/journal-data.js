@@ -1,6 +1,16 @@
 /* 自動生成。編集元は content/journals/YYYY.json。生成: node scripts/build-journals.mjs */
 window.HIYOSHI_JOURNAL = [
   {
+    "id": "2026-09-29",
+    "date": "2026-09-29",
+    "place": "日吉",
+    "category": "稽古の記録",
+    "photo": "",
+    "title": "基準性を、一線球磨の稽古へ。",
+    "excerpt": "雨の中、総勢5名での稽古。身理学で追求した基準性を一線球磨に落とし込み、理とひとり稽古と対練のつながりを確かめました。",
+    "href": "journal-2026.html#entry-2026-09-29"
+  },
+  {
     "id": "2026-09-15",
     "date": "2026-09-15",
     "place": "綱島地区センター",
