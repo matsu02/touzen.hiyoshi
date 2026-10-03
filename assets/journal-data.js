@@ -3,7 +3,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-09-29",
     "date": "2026-09-29",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "基準性を、一線球磨の稽古へ。",
@@ -23,7 +23,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-09-01",
     "date": "2026-09-01",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "手と足のアーチから、揺腕と刀禅へ。",
@@ -33,7 +33,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-08-25",
     "date": "2026-08-25",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "身体の外にある基準を、動きの中へ。",
@@ -43,7 +43,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-08-12",
     "date": "2026-08-12",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "基盤練法と揺腕をつなぎ、刀法へ。",
@@ -83,7 +83,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-08-04",
     "date": "2026-08-04",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "さまざまな稽古が、ひとつにつながるとき。",
@@ -93,7 +93,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-07-28",
     "date": "2026-07-28",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチの末端を意識して、二線球磨へ。",
@@ -103,7 +103,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-07-21",
     "date": "2026-07-21",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "単純な原理を、日々の動きに刷り込む。",
@@ -113,7 +113,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-07-15",
     "date": "2026-07-15",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "少人数で、日吉の稽古を一通り。",
@@ -123,7 +123,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-07-07",
     "date": "2026-07-07",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチという原理で、稽古を組み立てる。",
@@ -133,7 +133,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-06-30",
     "date": "2026-06-30",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "積み重ねを経て、新たなスタート地点へ。",
@@ -143,7 +143,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-06-24",
     "date": "2026-06-24",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての方に、刀禅の骨子を伝える。",
@@ -153,7 +153,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-06-16",
     "date": "2026-06-16",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "理屈と実践をつなぐ、クロスアーチ。",
@@ -173,7 +173,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-06-02",
     "date": "2026-06-02",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "納脚と手足のアーチから、二線球磨を練る。",
@@ -183,7 +183,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-05-26",
     "date": "2026-05-26",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "札幌で得た学びを、日吉の稽古へ。",
@@ -193,7 +193,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-05-19",
     "date": "2026-05-19",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "札幌講習会を前に、アーチの原理を確かめる。",
@@ -203,7 +203,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-05-12",
     "date": "2026-05-12",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "舟足と椀足、その表裏を探る。",
@@ -213,7 +213,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-04-22",
     "date": "2026-04-22",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "木刀と相手を通して、基準を確かめる。",
@@ -223,7 +223,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-04-14",
     "date": "2026-04-14",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕・揺脚・対人稽古で、アーチを探る。",
@@ -233,7 +233,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-03-31",
     "date": "2026-03-31",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "脚を吊り下げ、納脚を身体に馴染ませる。",
@@ -243,7 +243,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-03-24",
     "date": "2026-03-24",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "身理学の知見を、地味な稽古に込める。",
@@ -253,7 +253,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-03-17",
     "date": "2026-03-17",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "納脚ドリルを、皆の気づきで深める。",
@@ -263,7 +263,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-03-10",
     "date": "2026-03-10",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての刀禅。基礎の基礎から。",
@@ -273,7 +273,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-03-03",
     "date": "2026-03-03",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "要点を、じっくり身体に馴染ませる。",
@@ -283,7 +283,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-02-24",
     "date": "2026-02-24",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "独り稽古と対人稽古で、伸び代を見つける。",
@@ -293,7 +293,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-02-10",
     "date": "2026-02-10",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕から、刀禅の対人稽古への道筋。",
@@ -303,7 +303,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-01-27",
     "date": "2026-01-27",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "納脚ドリルと、昔ながらの木刀正面。",
@@ -313,7 +313,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-01-13",
     "date": "2026-01-13",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "坐骨と揺腕から、刀禅の姿勢をつくる。",
@@ -323,7 +323,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2026-01-06",
     "date": "2026-01-06",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "理屈・独り稽古・対人稽古を行き来する。",
@@ -333,7 +333,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-12-23",
     "date": "2025-12-23",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "シンプルな原理を大切に、稽古納め。",
@@ -343,7 +343,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-12-02",
     "date": "2025-12-02",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "納脚ドリルから、日常に溶け込む稽古へ。",
@@ -353,7 +353,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-11-25",
     "date": "2025-11-25",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "身理学を踏まえ、身体のつながりを見直す。",
@@ -363,7 +363,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-11-19",
     "date": "2025-11-19",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "納脚とアーチを探る、濃密な少人数稽古。",
@@ -373,7 +373,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-11-11",
     "date": "2025-11-11",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "オランダの仲間と、刀禅の基本を共有する。",
@@ -383,7 +383,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-10-29",
     "date": "2025-10-29",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "脚と腕をつなぐ、納脚ドリルづくり。",
@@ -393,7 +393,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-10-22",
     "date": "2025-10-22",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "脚と腕のアーチを、合掌功に込める。",
@@ -403,7 +403,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-10-14",
     "date": "2025-10-14",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチの原理から、姿勢と納脚を捉える。",
@@ -413,7 +413,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-10-07",
     "date": "2025-10-07",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "内側の詰まりを意識して、掛け掌へ。",
@@ -423,7 +423,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-09-24",
     "date": "2025-09-24",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "理解した原理を、身体で練り込む。",
@@ -433,7 +433,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-09-16",
     "date": "2025-09-16",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺脚から揺腕へ。新たな練功の道筋。",
@@ -443,7 +443,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-09-02",
     "date": "2025-09-02",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチの作り方を、より細かく確かめる。",
@@ -453,7 +453,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-08-19",
     "date": "2025-08-19",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "足裏の起点から、アーチと二線球磨へ。",
@@ -463,7 +463,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-08-12",
     "date": "2025-08-12",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての方と、姿勢づくりから二線球磨へ。",
@@ -473,7 +473,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-08-05",
     "date": "2025-08-05",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "「木刀が軽い」。身体のつながりが言葉になる。",
@@ -483,7 +483,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-07-29",
     "date": "2025-07-29",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "椀足と身体のつながりを、皆で確かめる。",
@@ -493,7 +493,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-07-22",
     "date": "2025-07-22",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "盤旋功をじっくり練って、対人稽古へ。",
@@ -503,7 +503,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-07-15",
     "date": "2025-07-15",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "大切な稽古を、時間をかけて味わう。",
@@ -513,7 +513,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-07-01",
     "date": "2025-07-01",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "水平と垂直を確かめ、姿勢をつくる。",
@@ -523,7 +523,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-06-18",
     "date": "2025-06-18",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "重力を手がかりに、基本功を見直す。",
@@ -533,7 +533,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-06-11",
     "date": "2025-06-11",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "抗重力性から、刀禅の姿勢を確かめる。",
@@ -543,7 +543,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-06-03",
     "date": "2025-06-03",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "重力を意識した、揺腕と合掌功。",
@@ -553,7 +553,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-05-27",
     "date": "2025-05-27",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "坐骨と足の回転から、全身の動きへ。",
@@ -563,7 +563,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-05-20",
     "date": "2025-05-20",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての方と、原理原則に忠実な稽古を。",
@@ -573,7 +573,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-05-13",
     "date": "2025-05-13",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕・姿勢・盤旋功。基礎の全体を見渡す。",
@@ -583,7 +583,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-04-30",
     "date": "2025-04-30",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "胯入れから、姿勢と球磨をつなぐ。",
@@ -593,7 +593,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-04-22",
     "date": "2025-04-22",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と水平面を、日常の稽古へ。",
@@ -603,7 +603,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-04-15",
     "date": "2025-04-15",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "踵への通しと面性を、掛け掌で練る。",
@@ -613,7 +613,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-04-09",
     "date": "2025-04-09",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕から対人稽古へ、基礎を練り込む。",
@@ -623,7 +623,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-04-01",
     "date": "2025-04-01",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "水平面の意識を、合掌功と盤旋功へ。",
@@ -633,7 +633,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-03-25",
     "date": "2025-03-25",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "身体の中の水平面を、細かく確かめる。",
@@ -643,7 +643,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-03-18",
     "date": "2025-03-18",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "若い仲間と、基本をじっくり学ぶ。",
@@ -653,7 +653,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-03-11",
     "date": "2025-03-11",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "圧縮から腕が動く原理を、相手と確かめる。",
@@ -663,7 +663,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-02-25",
     "date": "2025-02-25",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と刀禅のつながりを、対人稽古で探る。",
@@ -673,7 +673,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-02-12",
     "date": "2025-02-12",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "手から、足から。揺腕と古式の刀禅をつなぐ。",
@@ -683,7 +683,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-01-28",
     "date": "2025-01-28",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "後ろ足の踵と刀中蔵を、一線球磨へ。",
@@ -693,7 +693,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-01-22",
     "date": "2025-01-22",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "刀を浮かせて、刻歩を練る。",
@@ -703,7 +703,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-01-14",
     "date": "2025-01-14",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "刀を握る前に、姿勢とアーチを確かめる。",
@@ -713,7 +713,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2025-01-07",
     "date": "2025-01-07",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "刀中蔵をテーマに、2025年の稽古初め。",
@@ -723,7 +723,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-12-09",
     "date": "2024-12-09",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕から刀法まで、一年の稽古をつなぐ。",
@@ -733,7 +733,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-12-03",
     "date": "2024-12-03",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕の基準を、圧の掛け合いへ。",
@@ -743,7 +743,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-11-26",
     "date": "2024-11-26",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "新しい仲間と、姿勢づくりの基本から。",
@@ -753,7 +753,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-11-14",
     "date": "2024-11-14",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と盤旋功から、鶏歩と順逆へ。",
@@ -763,7 +763,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-11-05",
     "date": "2024-11-05",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "道具を持つことで見える、盤旋功の課題。",
@@ -773,7 +773,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-10-30",
     "date": "2024-10-30",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "「肩」と脚の関係から、姿勢を整える。",
@@ -783,7 +783,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-10-22",
     "date": "2024-10-22",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "基本に立ち返り、揺腕と姿勢をつなぐ。",
@@ -793,7 +793,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-10-15",
     "date": "2024-10-15",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "上下揺腕から、刻歩と円トウへ。",
@@ -803,7 +803,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-10-08",
     "date": "2024-10-08",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "Hさんの指導で、姿勢の基本を確かめる。",
@@ -813,7 +813,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-10-01",
     "date": "2024-10-01",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "盤旋功から、一線の歩行へ。",
@@ -823,7 +823,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-09-25",
     "date": "2024-09-25",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "3人揺腕と、姿勢づくりの稽古。",
@@ -833,7 +833,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-09-10",
     "date": "2024-09-10",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "道具の動きに沿い、沈んで戻る。",
@@ -843,7 +843,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-08-27",
     "date": "2024-08-27",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "持ち帰って練れる、立ち方の基本を。",
@@ -853,7 +853,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-08-20",
     "date": "2024-08-20",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と一打三足を、歩法につなぐ。",
@@ -863,7 +863,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-08-06",
     "date": "2024-08-06",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕の浮遊感を、丁寧に培う。",
@@ -873,7 +873,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-07-23",
     "date": "2024-07-23",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "オンラインを生かした、Sさんの揺腕指導。",
@@ -883,7 +883,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-07-16",
     "date": "2024-07-16",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての仲間と、姿勢と圧を確かめる。",
@@ -893,7 +893,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-07-09",
     "date": "2024-07-09",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕とアーチから、踵へのルートを探る。",
@@ -903,7 +903,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-07-03",
     "date": "2024-07-03",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "竹尺の揺腕から、合掌功と盤旋功へ。",
@@ -913,7 +913,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-06-25",
     "date": "2024-06-25",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "面を保つ揺腕から、盤旋功へ。",
@@ -923,7 +923,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-06-18",
     "date": "2024-06-18",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "立ち方を集中的に、二線の圧を確かめる。",
@@ -933,7 +933,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-06-11",
     "date": "2024-06-11",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "二線の体重移動と歩行を、相手と練る。",
@@ -943,7 +943,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-06-04",
     "date": "2024-06-04",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての刀禅。姿勢から出る力を知る。",
@@ -953,7 +953,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-05-28",
     "date": "2024-05-28",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕の基準を、一線と二線の稽古へ。",
@@ -963,7 +963,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-05-21",
     "date": "2024-05-21",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "姿勢がつくる圧を、踵に伝える。",
@@ -973,7 +973,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-05-15",
     "date": "2024-05-15",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "対面とオンラインで、気づきを交換する。",
@@ -983,7 +983,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-05-07",
     "date": "2024-05-07",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "胯と坐骨から、一線・二線の姿勢へ。",
@@ -993,7 +993,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-04-30",
     "date": "2024-04-30",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "日吉揺腕会の始まりと、姿勢の稽古。",
@@ -1003,7 +1003,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-04-23",
     "date": "2024-04-23",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "姿勢づくりから、面でのつながりへ。",
@@ -1013,7 +1013,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-04-16",
     "date": "2024-04-16",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "姿勢と圧の関係を、球磨で確かめる。",
@@ -1023,7 +1023,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-04-09",
     "date": "2024-04-09",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と刀禅の親和性を、身体で探る。",
@@ -1033,7 +1033,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-04-02",
     "date": "2024-04-02",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "遠隔の仲間とともに、姿勢と二線球磨を練る。",
@@ -1043,7 +1043,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-03-26",
     "date": "2024-03-26",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "立ち方を身につけるための、姿勢と圧の稽古。",
@@ -1063,7 +1063,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-03-12",
     "date": "2024-03-12",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "一線の姿勢を、木刀の構えにつなげる。",
@@ -1073,7 +1073,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-03-05",
     "date": "2024-03-05",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "胯と坐骨から、刀禅の姿勢を振り返る。",
@@ -1083,7 +1083,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-02-27",
     "date": "2024-02-27",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "姿勢から、刀の基本的な構えへ。",
@@ -1093,7 +1093,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-02-20",
     "date": "2024-02-20",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "皆のアイディアで、一線の基準を探る。",
@@ -1103,7 +1103,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-02-13",
     "date": "2024-02-13",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチを作るときに、守るべき基準。",
@@ -1113,7 +1113,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-02-06",
     "date": "2024-02-06",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "胯と膝の関係から、アーチをつくる。",
@@ -1123,7 +1123,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-01-29",
     "date": "2024-01-29",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "姿勢をつくることと、力が出ること。",
@@ -1133,7 +1133,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-01-23",
     "date": "2024-01-23",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "姿勢と圧のつながりを、相手と確かめる。",
@@ -1143,7 +1143,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-01-16",
     "date": "2024-01-16",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "二線と一線、それぞれの姿勢を知る。",
@@ -1153,7 +1153,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2024-01-09",
     "date": "2024-01-09",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "姿勢とアーチの基本から、2024年の稽古初め。",
@@ -1163,7 +1163,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-12-26",
     "date": "2023-12-26",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "最後も地味に、二線球磨の基本を練る。",
@@ -1183,7 +1183,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-12-12",
     "date": "2023-12-12",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチ構造を使った、内圧の操作。",
@@ -1193,7 +1193,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-12-05",
     "date": "2023-12-05",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "木刀の位置を保ち、二線球磨につなげる。",
@@ -1203,7 +1203,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-11-28",
     "date": "2023-11-28",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "立ち方の基本から、二線球磨へ。",
@@ -1213,7 +1213,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-11-21",
     "date": "2023-11-21",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての方と、アーチを作る基本を。",
@@ -1223,7 +1223,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-11-14",
     "date": "2023-11-14",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕とアーチの関係を、二線球磨へ。",
@@ -1233,7 +1233,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-11-07",
     "date": "2023-11-07",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕から、二線球磨の圧をつくる。",
@@ -1243,7 +1243,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-10-31",
     "date": "2023-10-31",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "一線の力の方向を、歩法で整える。",
@@ -1253,7 +1253,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-10-24",
     "date": "2023-10-24",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "対人稽古から、圧をやり取りする基準へ。",
@@ -1263,7 +1263,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-10-17",
     "date": "2023-10-17",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕から二線球磨へ、段階をつなぐ。",
@@ -1283,7 +1283,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-10-03",
     "date": "2023-10-03",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "相手とともに、片足で面をつくる。",
@@ -1293,7 +1293,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-09-27",
     "date": "2023-09-27",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "少人数で、対人稽古から深める。",
@@ -1303,7 +1303,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-09-20",
     "date": "2023-09-20",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と歩法、その相性を探る。",
@@ -1313,7 +1313,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-09-05",
     "date": "2023-09-05",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕・盤旋功・纏を、一続きの稽古に。",
@@ -1323,7 +1323,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-08-29",
     "date": "2023-08-29",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "一線の刻歩を、丁寧に練る。",
@@ -1333,7 +1333,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-08-22",
     "date": "2023-08-22",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と一線の先に、盤旋功と先拝刀。",
@@ -1343,7 +1343,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-08-15",
     "date": "2023-08-15",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アイルランドの仲間と、刀禅の基本を共有する。",
@@ -1353,7 +1353,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-08-01",
     "date": "2023-08-01",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕を、一線歩行へ展開する。",
@@ -1363,7 +1363,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-07-25",
     "date": "2023-07-25",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "体重移動を伴う揺腕から、歩法へ。",
@@ -1373,7 +1373,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-07-18",
     "date": "2023-07-18",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての刀禅。揺腕を出発点に。",
@@ -1393,7 +1393,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-07-04",
     "date": "2023-07-04",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と盤旋功から、歩法を組み立てる。",
@@ -1403,7 +1403,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-06-27",
     "date": "2023-06-27",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "鶏歩から、一線歩行の基本へ。",
@@ -1413,7 +1413,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-06-20",
     "date": "2023-06-20",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "歩法と外圧を、いつもの稽古に取り入れる。",
@@ -1423,7 +1423,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-06-14",
     "date": "2023-06-14",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕で作った面を、合掌功につなげる。",
@@ -1433,7 +1433,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-06-06",
     "date": "2023-06-06",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "竹尺を持って見えてくる、盤旋功の課題。",
@@ -1443,7 +1443,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-05-30",
     "date": "2023-05-30",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "盤旋功の要素を、一線に残す。",
@@ -1453,7 +1453,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-05-23",
     "date": "2023-05-23",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と盤旋功から、偏身へ。",
@@ -1463,7 +1463,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-05-16",
     "date": "2023-05-16",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "リクエストを手がかりに、盤旋功を練る。",
@@ -1473,7 +1473,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-05-09",
     "date": "2023-05-09",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "集中稽古の学びを、日吉で試す。",
@@ -1483,7 +1483,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-04-25",
     "date": "2023-04-25",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "合掌功から、盤旋功へ。",
@@ -1493,7 +1493,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-04-18",
     "date": "2023-04-18",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチの連動性を、合掌功で確かめる。",
@@ -1503,7 +1503,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-04-11",
     "date": "2023-04-11",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "新しい仲間と、基準に立ち戻る。",
@@ -1513,7 +1513,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-04-04",
     "date": "2023-04-04",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と歩法で、四隅と下への圧を確かめる。",
@@ -1523,7 +1523,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-03-28",
     "date": "2023-03-28",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕と古式の刀禅を、持ち帰れる稽古に。",
@@ -1533,7 +1533,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-03-22",
     "date": "2023-03-22",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "揺腕の基準から、合掌功と木刀へ。",
@@ -1543,7 +1543,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-03-14",
     "date": "2023-03-14",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "くの字立ちで、正中面を練る。",
@@ -1553,7 +1553,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-03-07",
     "date": "2023-03-07",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "二線球磨で、力を外に出す経験を。",
@@ -1563,7 +1563,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-02-28",
     "date": "2023-02-28",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "木刀とアーチの関わりを、盤旋功で確かめる。",
@@ -1573,7 +1573,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-02-21",
     "date": "2023-02-21",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "木刀の握り方から、独り稽古の基本へ。",
@@ -1583,7 +1583,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-02-07",
     "date": "2023-02-07",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "身体づくりの最初の一歩を探る。",
@@ -1593,7 +1593,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-01-31",
     "date": "2023-01-31",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "大きなアーチ構造を、合掌功に込める。",
@@ -1603,7 +1603,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-01-24",
     "date": "2023-01-24",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "基本の基準を、歩法へつなげる。",
@@ -1613,7 +1613,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2023-01-17",
     "date": "2023-01-17",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "多彩な仲間と、身体の軸を確かめる。",
@@ -1633,7 +1633,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-12-27",
     "date": "2022-12-27",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "二線球磨と発で、2022年の稽古納め。",
@@ -1643,7 +1643,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-12-20",
     "date": "2022-12-20",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての仲間と、大切な基準を一通り。",
@@ -1663,7 +1663,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-12-06",
     "date": "2022-12-06",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "左右の軸とアーチを、指先までつなげる。",
@@ -1673,7 +1673,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-11-22",
     "date": "2022-11-22",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "右路・左路の基本に集中する。",
@@ -1683,7 +1683,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-11-15",
     "date": "2022-11-15",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "合掌功と水平上げで、四隅を保つ。",
@@ -1693,7 +1693,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-11-01",
     "date": "2022-11-01",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "指を伸ばす稽古から、肩と肘を見直す。",
@@ -1703,7 +1703,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-10-25",
     "date": "2022-10-25",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "体重移動と竹尺で、基本の基準をつくる。",
@@ -1713,7 +1713,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-10-18",
     "date": "2022-10-18",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "四隅の維持と圧縮を、木刀で確かめる。",
@@ -1723,7 +1723,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-10-11",
     "date": "2022-10-11",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "講習会の学びと、いつもの基礎稽古。",
@@ -1733,7 +1733,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-10-04",
     "date": "2022-10-04",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "基本を身体で確認し、引き球磨の対練へ。",
@@ -1743,7 +1743,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-09-27",
     "date": "2022-09-27",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "新しい仲間と、基本練功を重ねる。",
@@ -1753,7 +1753,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-09-20",
     "date": "2022-09-20",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "二線の体重移動から、合掌功へ。",
@@ -1763,7 +1763,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-09-13",
     "date": "2022-09-13",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "体重移動と足上げで、四隅を知る。",
@@ -1773,7 +1773,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-08-30",
     "date": "2022-08-30",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "二線球磨で、浮いている足を意識する。",
@@ -1783,7 +1783,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-08-09",
     "date": "2022-08-09",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "二線球磨・合掌功・盤旋功に通じる基準。",
@@ -1793,7 +1793,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-08-02",
     "date": "2022-08-02",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "引き球磨と合掌功、そのつながりを検証する。",
@@ -1803,7 +1803,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-07-27",
     "date": "2022-07-27",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "引き球磨・背中・アーチを、少人数で練る。",
@@ -1823,7 +1823,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-07-05",
     "date": "2022-07-05",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "経験者同士で、基本の合掌功に立ち戻る。",
@@ -1843,7 +1843,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-06-21",
     "date": "2022-06-21",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "初めての方と、アーチの基礎を学ぶ。",
@@ -1853,7 +1853,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-06-14",
     "date": "2022-06-14",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "経緯手の腕振りと、骨盤周りのアーチ。",
@@ -1863,7 +1863,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-06-08",
     "date": "2022-06-08",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "経緯手を手がかりに、刀禅の基準を確かめる。",
@@ -1883,7 +1883,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-05-24",
     "date": "2022-05-24",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "木刀を水先案内人に、青岸の対練へ。",
@@ -1893,7 +1893,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-05-17",
     "date": "2022-05-17",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチから生まれる圧を、歩法につなぐ。",
@@ -1903,7 +1903,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-05-10",
     "date": "2022-05-10",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "アーチと木刀の動きを、歩法でつなげる。",
@@ -1913,7 +1913,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-04-27",
     "date": "2022-04-27",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "合掌から、一線・二線の歩行へ。",
@@ -1923,7 +1923,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-04-19",
     "date": "2022-04-19",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "基本の中に潜む、細かな意識を探る。",
@@ -1943,7 +1943,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-04-05",
     "date": "2022-04-05",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "四隅の基準を整えて、腕振りを練る。",
@@ -1953,7 +1953,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-03-29",
     "date": "2022-03-29",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "右路・左路と、アーチの大枠をつくる。",
@@ -1963,7 +1963,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-03-22",
     "date": "2022-03-22",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "平円相を、対人稽古で練る。",
@@ -1973,7 +1973,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-03-15",
     "date": "2022-03-15",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "合掌の平円相を、歩行に生かす。",
@@ -1983,7 +1983,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-03-01",
     "date": "2022-03-01",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "平円相から、一線の歩行と打拳へ。",
@@ -1993,7 +1993,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-02-08",
     "date": "2022-02-08",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "合掌の平円相で、腕とアーチを連係させる。",
@@ -2003,7 +2003,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-02-01",
     "date": "2022-02-01",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "平円相と、立ち方・歩み方の連携。",
@@ -2013,7 +2013,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-01-25",
     "date": "2022-01-25",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "青岸の基準から、平円相へ。",
@@ -2023,7 +2023,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-01-19",
     "date": "2022-01-19",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "木刀の重さを、基盤で捕まえ続ける。",
@@ -2043,7 +2043,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2022-01-05",
     "date": "2022-01-05",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "打つ経験から、一線歩行へ。",
@@ -2053,7 +2053,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2021-12-21",
     "date": "2021-12-21",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "独り稽古に持ち帰れる、一連の流れを。",
@@ -2063,7 +2063,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2021-12-07",
     "date": "2021-12-07",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "後拝刀で、基準と感覚のずれを確かめる。",
@@ -2083,7 +2083,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2021-11-17",
     "date": "2021-11-17",
-    "place": "綱島",
+    "place": "綱島地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "基本に戻って、盤旋功と纏を練る。",
@@ -2123,7 +2123,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2021-10-20",
     "date": "2021-10-20",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "刀の持ち方から、青岸と基盤の関係へ。",
@@ -2763,7 +2763,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2020-02-18",
     "date": "2020-02-18",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "壁と竹尺で、一線の基準を明確に。",
@@ -2803,7 +2803,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2020-01-07",
     "date": "2020-01-07",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "壁に教わる、家に持ち帰れる稽古。",
@@ -2833,7 +2833,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2019-12-03",
     "date": "2019-12-03",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "合掌功から、平円相と一線の対練へ。",
@@ -2913,7 +2913,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2019-10-09",
     "date": "2019-10-09",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "竹尺で明確にする、二線の基準。",
@@ -2973,7 +2973,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2019-08-20",
     "date": "2019-08-20",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "木刀に教わる、骨盤の基準。",
@@ -3013,7 +3013,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2019-07-16",
     "date": "2019-07-16",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "踵に集約し、楔と面を確かめる。",
@@ -3043,7 +3043,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2019-06-25",
     "date": "2019-06-25",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "踵の一点から、一線の動きへ。",
@@ -3503,7 +3503,7 @@ window.HIYOSHI_JOURNAL = [
   {
     "id": "2018-05-29",
     "date": "2018-05-29",
-    "place": "日吉",
+    "place": "日吉地区センター",
     "category": "稽古の記録",
     "photo": "",
     "title": "紐を手がかりに、面の基準を確かめる。",
