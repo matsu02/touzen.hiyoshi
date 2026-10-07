@@ -1,6 +1,16 @@
 /* 自動生成。編集元は content/journals/YYYY.json。生成: node scripts/build-journals.mjs */
 window.HIYOSHI_JOURNAL = [
   {
+    "id": "2026-10-06",
+    "date": "2026-10-06",
+    "place": "綱島地区センター",
+    "category": "稽古の記録",
+    "photo": "",
+    "title": "受け継いだ学びが、花開くとき。",
+    "excerpt": "札幌からSさんを迎え、総勢6名での稽古。これまでに深まった学びを分かち合い、大切な手応えと、伝わることの喜びを感じる一日になりました。",
+    "href": "journal-2026.html#entry-2026-10-06"
+  },
+  {
     "id": "2026-09-29",
     "date": "2026-09-29",
     "place": "日吉地区センター",
