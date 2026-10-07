@@ -15,6 +15,10 @@ window.HIYOSHI_CONFIG = {
     {
       date: '2026-10-28',
       text: '今月は、最終週だけ水曜日です。ご注意ください。'
+    },
+    {
+      date: '2026-12-22',
+      text: '少し気が早いですが、今年の忘年会は12月22日(火)を予定しています。'
     }
   ],
   contactFormUrl: 'https://www.touzen.jp/contact/for_club',
