@@ -46,16 +46,30 @@ class Element {
   }
 }
 const flush = () => new Promise(resolve => setImmediate(resolve));
-const fixture = ({ payload, fallback, protocol = 'https:', fetcher } = {}) => {
+const fixture = ({ payload, fallback, protocol = 'https:', fetcher, now = '2026-09-16T03:00:00Z' } = {}) => {
   const root = new Element('div'), title = new Element('strong'), details = new Element('p');
   const markers = { '[data-practice-calendar]': root, '[data-next-title]': title, '[data-next-details]': details };
   let fetchCalls = 0;
-  class FixedDate extends Date { static now() { return Date.parse('2026-09-16T03:00:00Z'); } }
+  let currentTime = Date.parse(now);
+  let timerId = 0;
+  const timers = new Map();
+  const windowHandlers = {}, documentHandlers = {};
+  const dispatch = (handlers, type, event = {}) => {
+    for (const callback of handlers[type] || []) callback({ type, ...event });
+  };
+  class FixedDate extends Date { static now() { return currentTime; } }
   const window = {
     HIYOSHI_CONFIG: { calendarDataUrl: 'data/calendar.json' },
     HIYOSHI_CALENDAR_DATA: fallback,
     location: { protocol, href: `${protocol}//example.test/index.html` },
-    setTimeout, clearTimeout
+    setTimeout: callback => { timers.set(++timerId, callback); return timerId; },
+    clearTimeout: id => timers.delete(id),
+    addEventListener: (type, callback) => { (windowHandlers[type] ??= []).push(callback); }
+  };
+  const document = {
+    hidden: false,
+    querySelector: selector => markers[selector], createElement: tag => new Element(tag),
+    addEventListener: (type, callback) => { (documentHandlers[type] ??= []).push(callback); }
   };
   const fetch = async (...args) => {
     fetchCalls++;
@@ -63,10 +77,20 @@ const fixture = ({ payload, fallback, protocol = 'https:', fetcher } = {}) => {
     return { ok: true, json: async () => payload };
   };
   vm.runInNewContext(source, {
-    window, document: { querySelector: selector => markers[selector], createElement: tag => new Element(tag) },
+    window, document,
     Date: FixedDate, Intl, URL, AbortController, fetch
   });
-  return { root, title, details, fetchCalls: () => fetchCalls, byClass: name => root.querySelector(`.${name}`), day: key => root.querySelectorAll('button[data-calendar-day]').find(day => day.dataset.calendarDay === key) };
+  return {
+    root, title, details, fetchCalls: () => fetchCalls,
+    byClass: name => root.querySelector(`.${name}`),
+    day: key => root.querySelectorAll('button[data-calendar-day]').find(day => day.dataset.calendarDay === key),
+    setNow: value => { currentTime = Date.parse(value); },
+    pageshow: () => dispatch(windowHandlers, 'pageshow'),
+    setHidden: hidden => { document.hidden = hidden; dispatch(documentHandlers, 'visibilitychange'); },
+    fireTimeouts: () => {
+      for (const [id, callback] of [...timers]) { timers.delete(id); callback(); }
+    }
+  };
 };
 const payload = {
   updatedAt: '2026-09-16T01:15:00Z', rangeStart: '2026-08-01', rangeEnd: '2026-11-01',
@@ -167,4 +191,92 @@ test('uninitialized data and a failed fetch do not claim that the month is empty
   assert.match(failed.details.textContent, /Googleカレンダー/);
   assert.equal(failed.root.querySelectorAll('.is-practice').length, 0);
   assert.equal(failed.byClass('practice-calendar__updated'), null);
+});
+
+test('resuming updates an expired next practice while one refresh is pending, retaining the newer saved copy on failure', async () => {
+  const current = { ...payload, events: [
+    ...payload.events,
+    { title: '昼の稽古', start: '2026-09-16T11:30:00+09:00', end: '2026-09-16T12:30:00+09:00' }
+  ] };
+  const older = { ...payload, updatedAt: '2026-09-15T01:00:00Z', events: [payload.events[0]] };
+  let requests = 0, failRefresh;
+  const page = fixture({ fallback: older, fetcher: () => {
+    requests++;
+    if (requests === 2) return new Promise((_resolve, reject) => { failRefresh = reject; });
+    return { ok: true, json: async () => requests === 1 ? current : { ...payload, events: [payload.events[3]] } };
+  } });
+  await flush();
+  assert.match(page.details.textContent, /昼の稽古.*開催中/);
+  page.pageshow();
+  assert.equal(page.fetchCalls(), 1, 'the initial pageshow does not duplicate the initial fetch');
+  page.setHidden(true);
+  assert.equal(page.fetchCalls(), 1, 'backgrounding does not request data');
+  page.setNow('2026-09-16T04:00:00Z');
+  page.setHidden(false);
+  assert.equal(page.fetchCalls(), 2);
+  assert.equal(page.root.getAttribute('aria-busy'), 'true');
+  assert.match(page.title.textContent, /9月29日/, 'the expired event disappears before the network responds');
+  assert.doesNotMatch(page.details.textContent, /開催中/);
+  page.pageshow();
+  assert.equal(page.fetchCalls(), 2, 'simultaneous lifecycle events share the in-flight request');
+  failRefresh(new Error('offline'));
+  await flush();
+  assert.equal(page.root.getAttribute('aria-busy'), 'false');
+  assert.match(page.title.textContent, /9月29日/, 'a refresh failure keeps the newer downloaded copy');
+  assert.match(page.byClass('practice-calendar__status').textContent, /保存済みの予定/);
+  page.setNow('2026-09-16T04:02:00Z');
+  page.pageshow();
+  await flush();
+  assert.equal(page.fetchCalls(), 3);
+  assert.match(page.title.textContent, /10月13日/, 'returning online loads the changed snapshot');
+  assert.doesNotMatch(page.byClass('practice-calendar__status').textContent, /保存済みの予定/);
+  page.pageshow();
+  assert.equal(page.fetchCalls(), 3, 'a second lifecycle event after completion is also deduplicated');
+});
+
+test('returning across Japan midnight follows the current month but preserves a manually browsed month', async () => {
+  const rollover = { ...payload, events: [
+    { title: '月末の稽古', start: '2026-09-30', end: '2026-10-01', allDay: true },
+    payload.events[3]
+  ] };
+  const options = { payload: rollover, now: '2026-09-30T14:59:00Z' };
+  const automatic = fixture(options), manual = fixture(options);
+  await flush();
+  manual.root.querySelectorAll('.practice-calendar__nav')[0].click();
+  assert.match(automatic.title.textContent, /9月30日/);
+  assert.equal(automatic.day('2026-09-30').getAttribute('aria-pressed'), 'true');
+  for (const page of [automatic, manual]) {
+    page.setHidden(true);
+    page.setNow('2026-09-30T15:01:00Z');
+    page.setHidden(false);
+  }
+  await flush();
+  assert.equal(automatic.byClass('practice-calendar__month').textContent, '2026年10月');
+  assert.equal(automatic.byClass('is-today').textContent, '1');
+  assert.match(automatic.title.textContent, /10月13日/);
+  assert.equal(automatic.day('2026-10-13').getAttribute('aria-pressed'), 'true');
+  assert.equal(manual.byClass('practice-calendar__month').textContent, '2026年8月');
+  assert.match(manual.title.textContent, /10月13日/);
+});
+
+test('a blocked request times out without claiming an empty calendar and can retry on return', async () => {
+  let requests = 0;
+  const page = fixture({ fetcher: (_url, { signal }) => {
+    if (++requests > 1) return { ok: true, json: async () => payload };
+    return new Promise((_resolve, reject) => {
+      signal.addEventListener('abort', () => reject(new Error('aborted')), { once: true });
+    });
+  } });
+  page.setNow('2026-09-16T03:01:00Z');
+  page.pageshow();
+  assert.equal(page.fetchCalls(), 1, 'returning during a blocked request does not start a second one');
+  page.fireTimeouts();
+  await flush();
+  assert.equal(page.root.getAttribute('aria-busy'), 'false');
+  assert.match(page.byClass('practice-calendar__status').textContent, /読み込めませんでした/);
+  assert.doesNotMatch(page.byClass('practice-calendar__status').textContent, /この月の稽古予定はありません/);
+  page.pageshow();
+  await flush();
+  assert.equal(page.fetchCalls(), 2);
+  assert.match(page.title.textContent, /9月29日/);
 });

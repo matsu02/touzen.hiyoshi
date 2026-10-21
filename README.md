@@ -57,6 +57,23 @@ announcements: [
 
 日付または本文が空欄、日付が無効、あるいは期限切れの項目は表示しません。表示する項目が一つもない場合は、余白も含めて欄ごと非表示になり、カレンダーが続きます。すべての掲載を取り下げるときは `announcements: []` にしてください。本文は通常の文字列として表示され、改行には `\n` が使えます。
 
+## ホーム画面から稽古予定を開く（PWA）
+
+サイトをホーム画面に追加すると、「刀禅日吉」のアイコンから `index.html#schedule` を開けます。稽古予定・次の稽古・アナウンスは、通常のサイトと同じデータを表示します。
+
+- iPhone・iPad：Safariでページを開き、「共有」→「ホーム画面に追加」→「追加」。表示される場合は「ウェブアプリとして開く」をオンにします。
+- Android：Chromeで開き、ページの「アプリを追加」ボタン、またはChromeのメニューからインストールします。ボタンはブラウザがインストールに対応している場合に表示します。
+
+ページの稽古予定欄にも、端末に合わせた追加方法を表示します。QRコードの読み取り後、最後の追加操作は利用者が行います。既存のQRコード `assets/qr/hiyoshi-schedule-iphone.png` は、そのまま使えます。
+
+PWA対応には `manifest.webmanifest`、`sw.js`、`assets/pwa.js`、`assets/pwa.css`、`assets/icons/` と、変更した `index.html`・`assets/calendar.js` を一緒に公開してください。GitHub Pagesのリポジトリ配下でも動くよう、パスは相対指定にしています。ホーム画面への追加やオフライン用の保存は、HTTPSで公開したサイトまたはlocalhostで確認します。
+
+通信できるときはページや設定をネットワークから取得し、通信できないときは保存済みの画面を使用します。`data/calendar.json` はService Workerから保存データを返さず、通信失敗時は従来どおり `assets/calendar-data.js` の予定を使い、カレンダーに保存済みデータであることを表示します。初回アクセス前のオフライン利用や、写真・日誌全体のオフライン閲覧は対象にしていません。
+
+アプリに戻った際は日時と予定データを再確認します。新しく公開されたアナウンス本文は、ページを再読み込みすると反映されます。Googleカレンダーからの取り込み方法は従来と同じです。予定を変更したら `node scripts/update-calendar.mjs` を実行し、生成された `data/calendar.json` と `assets/calendar-data.js` も公開してください。PWA対応によって定期取り込みが追加されるわけではありません。
+
+追加案内とオフライン処理の検証は、`node --test scripts/test-pwa-install.mjs scripts/test-pwa-worker.mjs` で実行できます。
+
 ## 稽古日誌の検証
 
 `python3 scripts/check-journals.py` で、本文・記事数・リンク・本文の照合値を確認できます。

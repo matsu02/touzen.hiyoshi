@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#153f36">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="刀禅日吉">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <title>刀禅日吉同好会｜横浜・日吉・綱島で学ぶ刀禅と揺腕法</title>
   <meta name="description" content="立つ、歩く、腕を振る。いつもの動きから、身体を知る面白さを。刀禅日吉同好会は、横浜の日吉・綱島で刀禅と揺腕法を学ぶ稽古会です。">
   <meta property="og:title" content="刀禅日吉同好会｜身体を知る。日々が変わる。">
@@ -12,6 +16,8 @@
   <meta property="og:locale" content="ja_JP">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23153f36'/%3E%3Ctext x='32' y='46' fill='%23e6edb7' text-anchor='middle' font-family='serif' font-size='42'%3E刀%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css?v=20260918-method-disclosure-2"><link rel="stylesheet" href="assets/journal.css"><link rel="stylesheet" href="assets/hero.css"><link rel="stylesheet" href="assets/schedule.css?v=20260924-practice-times-1">
+  <link rel="stylesheet" href="assets/pwa.css">
+  <script defer src="assets/pwa.js"></script>
   <script defer src="assets/site-config.js"></script>
   <script defer src="assets/announcement.js"></script>
   <script defer src="assets/journal-data.js"></script>
@@ -70,6 +76,36 @@
         <div class="schedule-heading">
           <h2 class="section-label eyebrow" id="schedule-title"><span class="section-label-number">01 /</span> <span class="section-label-text">稽古の日程・会場・参加費</span></h2>
         </div>
+        <aside class="pwa-install" data-pwa-install aria-labelledby="pwa-install-title" hidden>
+          <div class="pwa-install-intro">
+            <img class="pwa-install-icon" src="assets/icons/icon-192.png" width="48" height="48" alt="">
+            <div>
+              <h3 id="pwa-install-title">ホーム画面からすぐ確認</h3>
+              <p>次の稽古・開催カレンダー・アナウンスを、アイコンから開けます。</p>
+            </div>
+            <button class="pwa-install-button" type="button" data-pwa-install-button hidden>アプリを追加</button>
+          </div>
+          <details class="pwa-install-help" data-pwa-install-help>
+            <summary>ホーム画面に追加する方法</summary>
+            <div class="pwa-install-steps" data-pwa-ios>
+              <p>iPhone・iPadでは、Safariでこのページを開いて操作してください。</p>
+              <ol>
+                <li>Safariの「共有」メニューを開きます。</li>
+                <li>「ホーム画面に追加」を選びます。</li>
+                <li>「ウェブアプリとして開く」が表示されたらオンにし、「追加」を押します。</li>
+              </ol>
+              <p class="pwa-install-note">LINEなどのアプリ内で開いている場合は、Safariで開き直してください。</p>
+            </div>
+            <div class="pwa-install-steps" data-pwa-android>
+              <p>Androidでは、Chromeでこのページを開いて操作してください。</p>
+              <ol>
+                <li>右上の「︙」メニューを開きます。</li>
+                <li>「インストールしてショートカットを作成」→「インストール」を選びます。「ホーム画面に追加」と表示される場合は、そちらを選びます。</li>
+              </ol>
+            </div>
+          </details>
+          <p class="pwa-install-status" data-pwa-install-status role="status" hidden></p>
+        </aside>
         <div class="schedule-announcement" data-announcement role="status" hidden></div>
         <div class="schedule-grid">
           <div class="calendar-panel">

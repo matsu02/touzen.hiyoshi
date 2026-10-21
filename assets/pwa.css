@@ -1,0 +1,60 @@
+.pwa-install {
+  margin-top: 24px;
+  margin-bottom: 22px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+}
+.pwa-install-intro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.pwa-install-icon {
+  flex: 0 0 48px;
+  border-radius: 10px;
+}
+.pwa-install-intro > div { flex: 1; min-width: 0; }
+.pwa-install h3 { font-size: 1rem; font-weight: 650; }
+.pwa-install p { margin: 4px 0 0; font-size: .85rem; line-height: 1.85; }
+.pwa-install-button {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--ink);
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.pwa-install-button:hover { background: #235e4d; }
+.pwa-install-button:disabled { opacity: .65; cursor: default; }
+.pwa-install-help { margin-top: 12px; }
+.pwa-install-help summary {
+  display: list-item;
+  list-style: disclosure-closed inside;
+  width: fit-content;
+  padding-block: 6px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.pwa-install-help summary::-webkit-details-marker { display: inline; }
+.pwa-install-help[open] summary { list-style-type: disclosure-open; }
+.pwa-install-steps { margin-top: 8px; }
+.pwa-install-steps + .pwa-install-steps { margin-top: 18px; }
+.pwa-install-steps ol { margin: 8px 0 0; padding-left: 1.6em; font-size: .85rem; line-height: 1.9; }
+.pwa-install-steps li + li { margin-top: 5px; }
+.pwa-install p.pwa-install-note { margin-top: 10px; color: var(--muted); font-size: .78rem; }
+.pwa-install p.pwa-install-status { margin-top: 12px; }
+@media (max-width: 600px) {
+  .pwa-install { padding: 18px; }
+  .pwa-install-intro { flex-wrap: wrap; gap: 12px; }
+  .pwa-install-button { width: 100%; }
+  .pwa-install h3 { font-size: .95rem; }
+}
+@media (display-mode: standalone), (display-mode: fullscreen) {
+  .pwa-install { display: none; }
+}
