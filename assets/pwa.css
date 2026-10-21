@@ -1,0 +1,64 @@
+.app-page {
+  max-width: 920px;
+  min-height: 65vh;
+  padding-top: 44px;
+  padding-bottom: 72px;
+}
+.app-breadcrumb { margin-bottom: 36px; color: var(--muted); font-size: .8rem; }
+.app-breadcrumb a { border-bottom: 1px solid var(--line); }
+.app-breadcrumb > span:first-of-type { margin-inline: 10px; }
+.app-heading { margin-bottom: 24px; }
+.app-heading-title { display: flex; gap: 26px; align-items: center; min-width: 0; }
+.app-heading-title > img { flex: 0 0 96px; border-radius: 22px; }
+.app-heading h1 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.6; letter-spacing: .06em; }
+.app-heading .eyebrow { margin-bottom: 5px; font-size: .7rem; }
+.app-lead { font-size: 1.05rem; line-height: 2; }
+.app-setup {
+  display: flow-root;
+  margin-top: 32px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--mist);
+}
+.app-setup-qr { float: right; width: 129px; margin: 0 0 16px 24px; }
+.app-setup-qr img { width: 129px; height: 129px; image-rendering: pixelated; }
+.app-setup h2 { font-family: var(--sans); font-size: 1.2rem; font-weight: 650; letter-spacing: .02em; }
+.app-native-install > p { margin-top: 12px; font-size: .9rem; line-height: 1.9; }
+.pwa-install-button { justify-content: center; min-height: 52px; margin-top: 24px; }
+.pwa-install-button:disabled { opacity: .65; cursor: default; }
+.app-schedule-url {
+  display: block;
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: .9rem;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.app-device-guide { scroll-margin-top: calc(var(--header-height) + 24px); }
+.app-device-guide > p { margin-top: 12px; font-size: .9rem; line-height: 1.9; }
+.app-device-guide:not([hidden]) + .app-device-guide { margin-top: 28px; }
+.app-device-guide ol { margin: 16px 0 0; padding-left: 1.5em; font-size: .9rem; line-height: 1.95; }
+.app-device-guide li + li { margin-top: 10px; }
+.app-device-guide p.pwa-install-note { margin-top: 18px; color: var(--muted); font-size: .8rem; }
+.app-install-content > p { margin-top: 20px; font-size: .9rem; line-height: 1.9; }
+.app-footnote { margin-top: 20px; color: var(--muted); font-size: .85rem; }
+@media (max-width: 760px) {
+  .app-page { padding-top: 28px; padding-bottom: 48px; }
+  .app-breadcrumb { margin-bottom: 26px; font-size: .75rem; }
+  .app-heading { margin-bottom: 20px; }
+  .app-heading-title { gap: 0; }
+  .app-heading-title > img { display: none; }
+  .app-heading h1 { font-size: clamp(1.55rem, 7vw, 1.9rem); }
+  .app-heading .eyebrow { font-size: .6rem; letter-spacing: .1em; }
+  .app-lead { font-size: .95rem; }
+  .app-desktop-break { display: none; }
+  .app-setup { margin-top: 26px; padding: 22px 20px; }
+  .app-setup-qr { width: 86px; margin-left: 16px; }
+  .app-setup-qr img { width: 86px; height: 86px; }
+  .app-setup h2 { font-size: 1.1rem; }
+  .app-native-install > p, .app-browser-note { clear: right; }
+  .pwa-install-button { width: 100%; padding-inline: 14px; font-size: .9rem; }
+}

@@ -86,12 +86,16 @@
     if (text !== undefined) node.textContent = text;
     return node;
   };
-  const now = Date.now();
-  const today = dayKey(now);
+  let now = Date.now();
+  let today = dayKey(now);
   let year = Number(today.slice(0, 4));
   let month = Number(today.slice(5, 7)) - 1;
   let selectedDay = '';
+  let selectedManually = false;
+  let followCurrentMonth = true;
   let data = { state: 'loading', events: [] };
+  let loading = false;
+  let lastLoadStartedAt = -Infinity;
   const toolbar = make('div', 'practice-calendar__toolbar');
   const previous = make('button', 'practice-calendar__nav', '‹');
   previous.type = 'button'; previous.setAttribute('aria-label', '前の月');
@@ -146,7 +150,10 @@
     const monthEnd = Date.UTC(year, month + 1, 1) - JST;
     const monthEvents = data.events.filter(event => event.start < monthEnd && event.end > monthStart);
     const activeDays = monthDays(year, month).filter(key => key && eventsOnDay(monthEvents, key).length);
-    if (!activeDays.includes(selectedDay)) selectedDay = activeDays.find(key => key >= today) || activeDays[0] || '';
+    if (!activeDays.includes(selectedDay)) {
+      selectedDay = activeDays.find(key => key >= today) || activeDays[0] || '';
+      selectedManually = false;
+    }
     monthDays(year, month).forEach((key, index) => {
       if (index % 7 === 0) { row = make('tr'); body.append(row); }
       const cell = make('td', key ? '' : 'is-empty');
@@ -180,6 +187,7 @@
         });
         day.addEventListener('click', () => {
           selectedDay = key;
+          selectedManually = true;
           body.querySelectorAll('button[data-calendar-day]').forEach(button => {
             const selected = button.dataset.calendarDay === selectedDay;
             button.classList.toggle('is-selected', selected);
@@ -217,13 +225,32 @@
   }
   const moveMonth = delta => {
     const date = new Date(Date.UTC(year, month + delta, 1));
-    year = date.getUTCFullYear(); month = date.getUTCMonth(); renderMonth();
+    year = date.getUTCFullYear(); month = date.getUTCMonth();
+    followCurrentMonth = false;
+    selectedManually = false;
+    renderMonth();
   };
   previous.addEventListener('click', () => moveMonth(-1));
   next.addEventListener('click', () => moveMonth(1));
   renderMonth(); renderNext();
 
+  function updateClock() {
+    now = Date.now();
+    const currentDay = dayKey(now);
+    if (currentDay === today) return;
+    today = currentDay;
+    if (followCurrentMonth) {
+      year = Number(today.slice(0, 4));
+      month = Number(today.slice(5, 7)) - 1;
+    }
+    if (!selectedManually) selectedDay = '';
+  }
+
   async function loadCalendar() {
+    if (loading) return;
+    loading = true;
+    lastLoadStartedAt = Date.now();
+    root.setAttribute('aria-busy', 'true');
     const controller = new AbortController();
     const timer = window.setTimeout(() => controller.abort(), 8000);
     try {
@@ -236,14 +263,29 @@
         data = readData(await response.json());
       }
     } catch {
-      // The packaged copy also supports opening index.html directly or a network outage.
-      try { data = { ...readData(window.HIYOSHI_CALENDAR_DATA), usedFallback: true }; }
-      catch { data = { state: 'error', events: [] }; }
+      // Keep a newer downloaded copy when the app resumes without a connection.
+      let saved = data.state === 'ready' ? data : null;
+      try {
+        const packaged = readData(window.HIYOSHI_CALENDAR_DATA);
+        if (!saved || (packaged.state === 'ready' && packaged.updatedAt > saved.updatedAt)) saved = packaged;
+      } catch { /* There may be no packaged data. */ }
+      data = saved ? { ...saved, usedFallback: true } : { state: 'error', events: [] };
     } finally {
       window.clearTimeout(timer);
+      loading = false;
+      updateClock();
       root.setAttribute('aria-busy', 'false');
       renderMonth(); renderNext();
     }
   }
+  function resumeCalendar() {
+    if (document.hidden) return;
+    updateClock();
+    renderMonth(); renderNext();
+    // pageshow and visibilitychange can describe the same return to the app.
+    if (Date.now() - lastLoadStartedAt >= 1000) loadCalendar();
+  }
+  window.addEventListener('pageshow', resumeCalendar);
+  document.addEventListener('visibilitychange', resumeCalendar);
   loadCalendar();
 })();
