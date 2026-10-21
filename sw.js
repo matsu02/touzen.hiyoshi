@@ -1,12 +1,13 @@
 'use strict';
 
 // Bump this version when changing the shell or the offline behavior.
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v4';
 const APP_ROOT = new URL('./', self.registration.scope);
 const CACHE_PREFIX = `hiyoshi-pwa-${APP_ROOT.pathname}-`;
 const CACHE_NAME = `${CACHE_PREFIX}${CACHE_VERSION}`;
 const SHELL_FILES = [
   'index.html',
+  'app.html',
   'manifest.webmanifest',
   'assets/style.css',
   'assets/journal.css',
@@ -22,7 +23,8 @@ const SHELL_FILES = [
   'assets/pwa.js',
   'assets/icons/icon-192.png',
   'assets/icons/icon-512.png',
-  'assets/icons/apple-touch-icon.png'
+  'assets/icons/apple-touch-icon.png',
+  'assets/qr/hiyoshi-schedule-iphone.png'
 ];
 const SHELL_URLS = SHELL_FILES.map(path => new URL(path, APP_ROOT).href);
 const SHELL_PATHS = new Set(SHELL_URLS.map(url => new URL(url).pathname));

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153f36">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="刀禅日吉">
+  <title>日程確認アプリ｜刀禅日吉同好会</title>
+  <meta name="description" content="稽古予定・次の稽古・アナウンスをホーム画面から確認。iPhoneとAndroidで使える、日吉同好会の日程確認アプリの追加方法をご案内します。">
+  <meta property="og:title" content="日程確認アプリ｜刀禅日吉同好会">
+  <meta property="og:description" content="次の稽古も、お知らせも。ホーム画面のアイコンからすぐに確認できます。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/style.css?v=20261021-app-nav-1">
+  <link rel="stylesheet" href="assets/pwa.css?v=20261021-app-panel-qr-1">
+  <script defer src="assets/site-config.js"></script>
+  <script defer src="assets/site.js"></script>
+  <script defer src="assets/pwa.js?v=20261021-app-device-1"></script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23153f36'/%3E%3Ctext x='32' y='46' fill='%23e6edb7' text-anchor='middle' font-family='serif' font-size='42'%3E刀%3C/text%3E%3C/svg%3E">
+<!-- THUMBNAIL_START -->
+<meta property="og:image" content="https://matsu02.github.io/touzen.hiyoshi/assets/photos/hero.jpg">
+<meta property="og:image:alt" content="日吉同好会のイメージ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://matsu02.github.io/touzen.hiyoshi/assets/photos/hero.jpg">
+<meta name="twitter:image:alt" content="日吉同好会のイメージ">
+<!-- THUMBNAIL_END -->
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="./index.html" aria-label="刀禅日吉同好会 ホーム"><span class="brand-mark">刀禅</span><span class="brand-text">日吉同好会<small>HIYOSHI TOUZEN</small></span><span class="brand-since">since 2017</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span class="menu-lines" aria-hidden="true"></span><span class="menu-label">メニュー</span></button>
+      <nav id="main-navigation" class="main-navigation" aria-label="メインメニュー">
+        <a href="./index.html#schedule">日程・会場</a><a href="./index.html#introduction">はじめての方へ</a><a href="./index.html#practice">日吉での稽古</a><a href="./index.html#instructor">主宰者</a><a href="./index.html#journal">稽古日誌</a><a href="./app.html" aria-current="page">日程確認アプリ</a>
+        <div class="contact-action">
+          <a class="nav-join" data-contact-form href="https://www.touzen.jp/contact/for_club" target="_blank" rel="noopener noreferrer" aria-describedby="header-contact-form-note">参加を申し込む <span aria-hidden="true">↗</span></a>
+          <small class="contact-action-note" id="header-contact-form-note">刀禅公式サイトのフォームが、別タブで開きます。</small>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap app-page">
+    <nav class="app-breadcrumb" aria-label="現在位置"><a href="./index.html">ホーム</a><span aria-hidden="true"> / </span><span aria-current="page">日程確認アプリ</span></nav>
+    <header class="app-heading">
+      <div class="app-heading-title">
+        <img src="assets/icons/icon-192.png" width="96" height="96" alt="">
+        <div><p class="eyebrow">HIYOSHI TOUZEN</p><h1>日程確認アプリ</h1></div>
+      </div>
+    </header>
+    <p class="app-lead">次の稽古・開催カレンダー・アナウンスを、<br class="app-desktop-break">ホーム画面のアイコンからすぐに確認できます。</p>
+    <section class="app-install-content" data-pwa-install aria-label="アプリの追加方法">
+      <p class="app-installed-note" data-pwa-installed hidden>ホーム画面から起動しています。追加方法は以下で確認できます。</p>
+      <p class="pwa-install-status" data-pwa-install-status role="status" hidden></p>
+      <div class="app-setup">
+        <figure class="app-setup-qr">
+          <a href="https://matsu02.github.io/touzen.hiyoshi/index.html#schedule"><img src="assets/qr/hiyoshi-schedule-iphone.png" width="129" height="129" alt="稽古日程のページを開くQRコード"></a>
+        </figure>
+        <div class="app-native-install" data-pwa-native hidden>
+          <h2>アプリを追加</h2>
+          <p>ボタンを押し、画面の案内に従って追加してください。</p>
+          <button class="button button-dark pwa-install-button" type="button" data-pwa-install-button>アプリを追加する</button>
+        </div>
+        <div class="app-manual" data-pwa-install-help>
+          <div class="app-platform-guides">
+            <section class="app-device-guide" data-pwa-ios id="install-iphone" tabindex="-1" aria-labelledby="install-iphone-title">
+              <h2 id="install-iphone-title">iPhone・iPad</h2>
+              <p class="app-browser-note">以下のURL、または、右上QRコードをSafariで開いて操作してください。</p>
+              <a class="app-schedule-url" data-app-schedule-url href="https://matsu02.github.io/touzen.hiyoshi/index.html#schedule">https://matsu02.github.io/touzen.hiyoshi/index.html#schedule</a>
+              <ol>
+                <li>稽古日程のページで、Safariの「共有」メニューを開きます。</li>
+                <li>「ホーム画面に追加」を選びます。</li>
+                <li>「ウェブアプリとして開く」が表示されたらオンにし、「追加」を押します。</li>
+              </ol>
+            </section>
+            <section class="app-device-guide" data-pwa-android id="install-android" tabindex="-1" aria-labelledby="install-android-title">
+              <h2 id="install-android-title">Android</h2>
+              <p class="app-browser-note">以下のURL、または、右上QRコードをChromeで開いて操作してください。</p>
+              <a class="app-schedule-url" data-app-schedule-url href="https://matsu02.github.io/touzen.hiyoshi/index.html#schedule">https://matsu02.github.io/touzen.hiyoshi/index.html#schedule</a>
+              <ol>
+                <li>稽古日程のページで、右上の「︙」メニューを開きます。</li>
+                <li>「インストールしてショートカットを作成」→「インストール」を選びます。「ホーム画面に追加」と表示される場合は、そちらを選びます。</li>
+                <li>確認画面の案内に沿って追加します。</li>
+              </ol>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <p class="app-footnote">追加後は「刀禅日吉」のアイコンから、稽古予定の画面が開きます。</p>
+  </main>
+<footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="./index.html"><span class="brand-mark">刀禅</span><span class="brand-text">日吉同好会<small>HIYOSHI TOUZEN</small></span></a><div class="footer-links"><a href="https://www.touzen.jp/" target="_blank" rel="noopener noreferrer">刀禅公式サイト ↗</a><a href="https://shimoa.wixsite.com/yowanhou" target="_blank" rel="noopener noreferrer">揺腕法公式サイト ↗</a><a data-legal-link href="tokushoho.html">特定商取引法に基づく表記</a></div><small>© <span data-year>2026</span> 刀禅日吉同好会</small></div></footer>
+</body>
+</html>

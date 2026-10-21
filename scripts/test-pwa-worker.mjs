@@ -89,7 +89,9 @@ test('install precaches a bounded shell under the project path, without calendar
   await app.lifecycle('install');
   const keys = [...app.stores.values()][0].keys();
   const paths = [...keys];
-  assert.equal(paths.length, 17);
+  assert.equal(paths.length, 19);
+  assert.ok(paths.includes(`${appRoot}app.html`));
+  assert.ok(paths.includes(`${appRoot}assets/qr/hiyoshi-schedule-iphone.png`));
   for (const path of paths) {
     assert.ok(path.startsWith(appRoot));
     assert.ok(!path.includes('/photos/'));
@@ -99,7 +101,7 @@ test('install precaches a bounded shell under the project path, without calendar
   assert.ok(app.requests.every(request => request.cache === 'reload'));
 });
 
-test('offline entry works through both the directory and index URL', async () => {
+test('offline entry and guide work with the saved schedule QR image', async () => {
   const app = fixture();
   await app.lifecycle('install');
   app.setOffline(true);
@@ -109,6 +111,10 @@ test('offline entry works through both the directory and index URL', async () =>
   }
   const dates = await app.request('assets/calendar-data.js');
   assert.equal(await dates.text(), 'saved:/touzen.hiyoshi/assets/calendar-data.js');
+  const guide = await app.request('app.html', { mode: 'navigate' });
+  assert.equal(await guide.text(), 'saved:/touzen.hiyoshi/app.html');
+  const qr = await app.request('assets/qr/hiyoshi-schedule-iphone.png');
+  assert.equal(await qr.text(), 'saved:/touzen.hiyoshi/assets/qr/hiyoshi-schedule-iphone.png');
 });
 
 test('online config and scripts refresh their offline copies without growing query keys', async () => {
@@ -123,7 +129,7 @@ test('online config and scripts refresh their offline copies without growing que
     assert.equal(await saved.text(), `updated:${path}`);
     app.setOffline(false);
   }
-  assert.equal([...app.stores.values()][0].size, 17);
+  assert.equal([...app.stores.values()][0].size, 19);
   const runtime = app.requests.filter(item => item.options);
   assert.ok(runtime.every(item => item.options.cache === 'no-cache'));
 });

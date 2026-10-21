@@ -8,24 +8,31 @@ const source = readFileSync(new URL('../assets/pwa.js', import.meta.url), 'utf8'
 class Element {
   hidden = false;
   disabled = false;
-  open = false;
   textContent = '';
+  focused = false;
   listeners = {};
+  querySelector() { return null; }
+  focus() { this.focused = true; }
   addEventListener(type, callback) { (this.listeners[type] ??= []).push(callback); }
   async emit(type, event = {}) { await Promise.all((this.listeners[type] || []).map(callback => callback(event))); }
 }
 
 function fixture(options = {}) {
   const root = new Element();
+  const nativePanel = new Element();
   const button = new Element();
   const help = new Element();
   const status = new Element();
+  const installedNote = new Element();
   const ios = new Element();
   const android = new Element();
+  nativePanel.hidden = status.hidden = installedNote.hidden = true;
   const elements = {
+    '[data-pwa-native]': nativePanel,
     '[data-pwa-install-button]': button,
     '[data-pwa-install-help]': help,
     '[data-pwa-install-status]': status,
+    '[data-pwa-installed]': installedNote,
     '[data-pwa-ios]': ios,
     '[data-pwa-android]': android
   };
@@ -56,101 +63,162 @@ function fixture(options = {}) {
     querySelector: () => options.noRoot ? null : root
   };
   vm.runInNewContext(source, { window, document, navigator });
-  return { root, button, help, status, ios, android, modes, navigator, window, registrations };
+  return { root, nativePanel, button, help, status, installedNote, ios, android, modes, navigator, window, registrations };
 }
 
-test('iPhone QR visitors see manual Safari steps and no unsupported install button', () => {
-  const page = fixture();
+const androidOptions = { userAgent: 'Mozilla/5.0 (Linux; Android 15) Chrome/140.0 Mobile Safari/537.36', platform: 'Linux armv8l' };
+const ipadOptions = { userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) Version/18.0 Safari/605.1.15', platform: 'MacIntel' };
+const desktopOptions = { userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/140.0', platform: 'Win32', maxTouchPoints: 0 };
+const assertManual = page => {
   assert.equal(page.root.hidden, false);
-  assert.equal(page.help.open, true);
-  assert.equal(page.ios.hidden, false);
-  assert.equal(page.android.hidden, true);
+  assert.equal(page.nativePanel.hidden, true);
   assert.equal(page.button.hidden, true);
-});
+  assert.equal(page.help.hidden, false);
+};
+const assertNative = page => {
+  assert.equal(page.root.hidden, false);
+  assert.equal(page.nativePanel.hidden, false);
+  assert.equal(page.button.hidden, false);
+  assert.equal(page.help.hidden, true);
+};
 
-test('iPad with desktop user agent also gets the iOS instructions', () => {
-  const page = fixture({ userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) Version/18.0 Safari/605.1.15', platform: 'MacIntel' });
-  assert.equal(page.ios.hidden, false);
-  assert.equal(page.android.hidden, true);
-  assert.equal(page.help.open, true);
-});
-
-test('home-screen launches hide installation instructions, including legacy iOS', async () => {
-  for (const options of [{ mode: 'standalone' }, { mode: 'fullscreen' }, { legacyStandalone: true }]) {
-    assert.equal(fixture(options).root.hidden, true);
+test('without a real install event, manual steps route to iPhone, iPad, Android, or both for desktop', () => {
+  for (const [options, iosHidden, androidHidden] of [[{}, false, true], [ipadOptions, false, true], [androidOptions, true, false], [desktopOptions, false, false]]) {
+    const page = fixture(options);
+    assertManual(page);
+    assert.equal(page.ios.hidden, iosHidden);
+    assert.equal(page.android.hidden, androidHidden);
+    assert.equal(page.ios.focused, false);
+    assert.equal(page.android.focused, false);
   }
-  const page = fixture();
-  page.modes['(display-mode: standalone)'].matches = true;
-  await page.modes['(display-mode: standalone)'].emit('change');
-  assert.equal(page.root.hidden, true);
-  page.modes['(display-mode: standalone)'].matches = false;
-  await page.window.emit('pageshow');
-  assert.equal(page.root.hidden, false);
 });
 
-test('Android without an install event retains the manual menu route', () => {
-  const page = fixture({ userAgent: 'Mozilla/5.0 (Linux; Android 15) Chrome/140.0 Mobile Safari/537.36', platform: 'Linux armv8l' });
-  assert.equal(page.ios.hidden, true);
-  assert.equal(page.android.hidden, false);
-  assert.equal(page.help.open, true);
-  assert.equal(page.button.hidden, true);
-});
-
-test('native prompt only runs on a click, once per event, and cancellation is not installation', async () => {
-  const page = fixture();
+test('a captured browser event switches exclusively to native install without opening or focusing guides', async () => {
+  const page = fixture(androidOptions);
   let prevented = 0;
+  let prompts = 0;
+  await page.window.emit('beforeinstallprompt', {
+    preventDefault() { prevented++; },
+    prompt() { prompts++; }
+  });
+  assert.equal(prevented, 1);
+  assert.equal(prompts, 0);
+  assertNative(page);
+  assert.equal(page.button.textContent, 'アプリを追加する');
+  assert.equal(page.button.disabled, false);
+  assert.equal(page.ios.focused, false);
+  assert.equal(page.android.focused, false);
+});
+
+test('native prompt runs immediately on click, prevents re-entry, and routes cancellation to Android steps', async () => {
+  const page = fixture(androidOptions);
   let prompts = 0;
   let resolveChoice;
   const userChoice = new Promise(resolve => { resolveChoice = resolve; });
   await page.window.emit('beforeinstallprompt', {
-    preventDefault: () => { prevented++; },
-    prompt: () => { prompts++; return Promise.resolve(); },
+    preventDefault() {},
+    prompt() { prompts++; return Promise.resolve(); },
     userChoice
   });
-  assert.equal(prevented, 1);
-  assert.equal(prompts, 0);
-  assert.equal(page.button.hidden, false);
   const pending = page.button.emit('click');
+  assert.equal(prompts, 1);
+  assertNative(page);
+  assert.equal(page.button.disabled, true);
   await page.button.emit('click');
   assert.equal(prompts, 1);
-  assert.equal(page.button.disabled, true);
   resolveChoice({ outcome: 'dismissed' });
   await pending;
-  assert.equal(page.root.hidden, false);
-  assert.equal(page.button.hidden, true);
+  assertManual(page);
   assert.equal(page.button.disabled, false);
+  assert.equal(page.android.hidden, false);
+  assert.equal(page.android.focused, true);
+  assert.equal(page.ios.hidden, true);
+  assert.equal(page.installedNote.hidden, true);
+  assert.equal(page.status.hidden, false);
+  await page.button.emit('click');
+  assert.equal(prompts, 1);
 });
 
-test('accepting a prompt does not report installed before appinstalled', async () => {
-  const page = fixture();
+test('accepted choice shows manual guidance without reporting installed before appinstalled', async () => {
+  const page = fixture(androidOptions);
   await page.window.emit('beforeinstallprompt', {
     preventDefault() {}, prompt: async () => {}, userChoice: Promise.resolve({ outcome: 'accepted' })
   });
   await page.button.emit('click');
-  assert.equal(page.root.hidden, false);
+  assertManual(page);
+  assert.equal(page.installedNote.hidden, true);
+  assert.match(page.status.textContent, /操作を受け付けました/);
+  assert.doesNotMatch(page.status.textContent, /追加が完了しました/);
+  assert.equal(page.android.focused, false);
   await page.window.emit('appinstalled');
-  assert.equal(page.root.hidden, true);
+  assertManual(page);
+  assert.equal(page.installedNote.hidden, false);
+  assert.match(page.status.textContent, /追加が完了しました/);
 });
 
-test('prompt errors offer manual steps without leaving a broken install button', async () => {
-  const page = fixture();
+test('prompt and choice errors hide native install and focus only the visible iPhone guide', async () => {
+  for (const failure of ['prompt', 'choice']) {
+    const page = fixture();
+    await page.window.emit('beforeinstallprompt', {
+      preventDefault() {},
+      prompt: async () => { if (failure === 'prompt') throw new Error('denied'); },
+      get userChoice() { return failure === 'choice' ? Promise.reject(new Error('aborted')) : undefined; }
+    });
+    await page.button.emit('click');
+    assertManual(page);
+    assert.equal(page.ios.hidden, false);
+    assert.equal(page.ios.focused, true);
+    assert.equal(page.android.hidden, true);
+    assert.equal(page.android.focused, false);
+    assert.equal(page.status.hidden, false);
+    assert.equal(page.button.disabled, false);
+  }
+});
+
+test('standalone launches show installed status with manual guidance even if an install event arrives', async () => {
+  for (const options of [{ mode: 'standalone' }, { mode: 'fullscreen' }, { legacyStandalone: true }]) {
+    const page = fixture(options);
+    assertManual(page);
+    assert.equal(page.installedNote.hidden, false);
+    assert.match(page.installedNote.textContent, /ホーム画面から起動/);
+    await page.window.emit('beforeinstallprompt', { preventDefault() {}, prompt() { assert.fail('already installed'); } });
+    assertManual(page);
+    await page.button.emit('click');
+  }
+});
+
+test('installation during a pending prompt retains installed status and does not reopen native install', async () => {
+  const page = fixture(androidOptions);
+  let resolveChoice;
   await page.window.emit('beforeinstallprompt', {
-    preventDefault() {}, prompt: async () => { throw new Error('denied'); }
+    preventDefault() {}, prompt: async () => {},
+    userChoice: new Promise(resolve => { resolveChoice = resolve; })
   });
-  await page.button.emit('click');
-  assert.equal(page.help.open, true);
-  assert.equal(page.status.hidden, false);
-  assert.equal(page.button.hidden, true);
-  assert.equal(page.button.disabled, false);
+  const pending = page.button.emit('click');
+  await page.window.emit('appinstalled');
+  assertManual(page);
+  resolveChoice({ outcome: 'accepted' });
+  await pending;
+  assertManual(page);
+  assert.equal(page.installedNote.hidden, false);
+  assert.match(page.status.textContent, /追加が完了しました/);
+});
+
+test('main pages without a guide still register the worker and capture native install events', async () => {
+  const page = fixture({ noRoot: true });
+  assert.equal(page.registrations.length, 1);
+  let prevented = false;
+  await page.window.emit('beforeinstallprompt', { preventDefault() { prevented = true; } });
+  assert.equal(prevented, true);
+  await page.window.emit('appinstalled');
 });
 
 test('worker registration waits for load and tolerates denied registration', async () => {
-  const page = fixture({ readyState: 'loading', registrationError: true });
+  const page = fixture({ readyState: 'loading', registrationError: true, noRoot: true });
   assert.equal(page.registrations.length, 0);
   await page.window.emit('load');
   assert.equal(page.registrations.length, 1);
   assert.equal(page.registrations[0][0], 'sw.js');
   assert.equal(page.registrations[0][1].updateViaCache, 'none');
   assert.equal(fixture({ protocol: 'file:' }).registrations.length, 0);
-  assert.equal(fixture({ noRoot: true }).registrations.length, 0);
 });
