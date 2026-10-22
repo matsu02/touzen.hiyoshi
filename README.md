@@ -17,6 +17,31 @@ Webサイトには、次の内容を掲載しています。
 
 HTML・CSS・JavaScriptで構成し、パソコンとスマートフォンでの閲覧に対応しています。
 
+## 独り稽古・対人稽古の写真
+
+トップページの写真は、ページを開くたびに次のフォルダーからそれぞれ1枚をランダムに選びます。同じ写真が続くこともあります。導入時は、元の写真だけを各フォルダーに入れています。写真全体が枠に収まるように表示し、人物が切れるのを防ぎます。
+
+| 写真 | 追加先 | 初期の写真 |
+| --- | --- | --- |
+| 独り稽古 | `assets/photos/solo/` | `solo03.jpg` |
+| 対人稽古 | `assets/photos/pair/` | `duo.jpg` |
+
+写真を追加するときは、該当フォルダーの直下に画像を置き、通常どおり `main` ブランチにコミット・プッシュしてください。GitHub Pagesのブランチ公開で使われるJekyllが、公開時に `data/practice-photos.json` の候補一覧を自動生成します。ファイル名を設定へ登録したり、公開方法を変更したりする必要はありません。候補から外すときは、その写真をフォルダーから削除して公開します。
+
+対応形式は JPG・JPEG・PNG・WebP・AVIF・GIF（拡張子の大文字・小文字は不問）です。隠しファイルとサブフォルダー内の画像は候補に入りません。写真は縦横比を保って全体を表示します。枠の大きさは揃え、写真の縦横比に応じて左右や上下に余白が入り、周囲と同じ背景色で表示します。元の写真で切れている部分は表示できません。余白がある場合の配置と共通の代替テキストは `assets/site-config.js` の `photos.solo`・`photos.pair` で調整できます。
+
+ローカルで写真を追加・削除して確認するときは、次のコマンドでローカル確認用の候補一覧を更新してください。
+
+```sh
+node scripts/build-practice-photos.mjs
+```
+
+生成される `assets/practice-photo-data.js` は、HTMLの直接表示やJekyllを使わないローカルサーバーで利用します。更新した場合は画像と一緒にコミットしてください。公開サイトでは、公開時に自動生成された一覧を優先します。`data/practice-photos.json` はJekyllのテンプレートなので、JSONとして直接編集しないでください。Jekyllを使わない別の公開環境へ移す場合は、上記コマンドによる一覧更新が必要です。
+
+候補が空、一覧を取得できない、選ばれた写真を読み込めない場合は、`assets/site-config.js` の `src` に設定した予備画像を使います。元の `assets/photos/solo03.jpg` と `assets/photos/duo.jpg` は、この予備画像として残しています。
+
+検証は `node --test scripts/test-practice-photo-build.mjs scripts/test-practice-photos.mjs scripts/test-pwa-worker.mjs` で実行できます。
+
 ## 共有サムネイルの設定
 
 `assets/site-config.js` の `thumbnail` で、リンクを共有したときの画像を指定します。初期値は `assets/photos/hero.jpg` です。

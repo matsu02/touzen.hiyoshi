@@ -1,0 +1,27 @@
+---
+layout: null
+---
+{
+{%- assign photo_groups = "solo,pair" | split: "," -%}
+{%- assign image_extensions = ".jpg,.jpeg,.png,.webp,.avif,.gif" | split: "," -%}
+{%- assign sorted_files = site.static_files | sort: "path" -%}
+{%- for group in photo_groups %}
+  {{ group | jsonify }}: [
+    {%- assign prefix = "/assets/photos/" | append: group | append: "/" -%}
+    {%- assign written = false -%}
+    {%- for file in sorted_files -%}
+      {%- assign parts = file.path | split: "/" -%}
+      {%- assign beginning = file.path | slice: 0, prefix.size -%}
+      {%- assign first_character = file.name | slice: 0, 1 -%}
+      {%- assign extension = file.extname | downcase -%}
+      {%- if parts.size == 5 and beginning == prefix and first_character != "." and image_extensions contains extension -%}
+        {%- if written -%},{%- endif -%}
+        {%- assign encoded_filename = file.name | url_encode | replace: "+", "%20" -%}
+        {%- assign photo_path = "assets/photos/" | append: group | append: "/" | append: encoded_filename -%}
+        {{- photo_path | jsonify -}}
+        {%- assign written = true -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ]{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+}

@@ -1,7 +1,7 @@
 'use strict';
 
 // Bump this version when changing the shell or the offline behavior.
-const CACHE_VERSION = 'v4';
+const CACHE_VERSION = 'v6';
 const APP_ROOT = new URL('./', self.registration.scope);
 const CACHE_PREFIX = `hiyoshi-pwa-${APP_ROOT.pathname}-`;
 const CACHE_NAME = `${CACHE_PREFIX}${CACHE_VERSION}`;
@@ -15,6 +15,8 @@ const SHELL_FILES = [
   'assets/schedule.css',
   'assets/pwa.css',
   'assets/site-config.js',
+  'assets/practice-photo-data.js',
+  'data/practice-photos.json',
   'assets/announcement.js',
   'assets/journal-data.js',
   'assets/site.js',

@@ -19,25 +19,49 @@
     if (!Number.isFinite(date.getTime())) return value;
     return new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit' }).format(date).replaceAll('/', '.');
   };
-  const loadPhoto = (slot) => {
+  const practicePhotoNames = ['solo', 'pair'];
+  const readPracticePhotos = async () => {
+    const fallback = window.HIYOSHI_PRACTICE_PHOTOS || {};
+    if (!['http:', 'https:'].includes(window.location.protocol)) return fallback;
+    const controller = new AbortController();
+    const timer = window.setTimeout(() => controller.abort(), 2000);
+    try {
+      // GitHub Pagesでは公開時にJekyllがフォルダー内の一覧を作る。
+      const response = await fetch('data/practice-photos.json', { cache: 'no-cache', signal: controller.signal });
+      if (!response.ok) return fallback;
+      const photos = await response.json();
+      return practicePhotoNames.every(name => Array.isArray(photos?.[name]) && photos[name].every(src => typeof src === 'string')) ? photos : fallback;
+    } catch {
+      // HTMLの直接表示・通常のローカルサーバー・オフラインでは生成済み一覧を使う。
+      return fallback;
+    } finally {
+      window.clearTimeout(timer);
+    }
+  };
+  const loadPhoto = (slot, candidates) => {
     if (slot.dataset.photoInitialized) return;
     slot.dataset.photoInitialized = 'true';
     const setting = config.photos?.[slot.dataset.photo];
     // HTMLを直接開いたときは、同じフォルダ内の写真も読み込めるようにする。
     const photoProtocols = window.location.protocol === 'file:' ? ['http:', 'https:', 'file:'] : ['http:', 'https:'];
-    const src = safeUrl(setting?.src, photoProtocols);
+    const fallback = safeUrl(setting?.src, photoProtocols);
+    const sources = Array.isArray(candidates) ? [...new Set(candidates.map(value => safeUrl(value, photoProtocols)).filter(Boolean))] : [];
+    const src = sources.length ? sources[Math.floor(Math.random() * sources.length)] : fallback;
     if (!src) return;
     const img = new Image();
-    img.alt = setting.alt || '稽古の風景';
+    img.alt = setting?.alt || '稽古の風景';
     img.loading = slot.dataset.photo === 'hero' ? 'eager' : 'lazy';
     img.decoding = 'async';
     if (slot.dataset.photo === 'hero') img.fetchPriority = 'high';
-    img.style.objectPosition = setting.position || '50% 50%';
+    img.style.objectPosition = setting?.position || '50% 50%';
     img.addEventListener('load', () => {
       slot.classList.add('has-photo');
       if (slot.hasAttribute('data-photo-optional')) slot.hidden = false;
     }, { once: true });
-    img.addEventListener('error', () => img.remove(), { once: true });
+    img.addEventListener('error', () => {
+      if (fallback && img.src !== fallback) img.src = fallback;
+      else img.remove();
+    });
     img.src = src;
     slot.append(img);
   };
@@ -132,5 +156,10 @@
       if (destination) { link.href = destination; article.append(link); window.location.replace(destination); }
     }
   }
-  all('[data-photo]').forEach(loadPhoto);
+  const photoSlots = all('[data-photo]');
+  photoSlots.filter(slot => !practicePhotoNames.includes(slot.dataset.photo)).forEach(slot => loadPhoto(slot));
+  const practiceSlots = photoSlots.filter(slot => practicePhotoNames.includes(slot.dataset.photo));
+  if (practiceSlots.length) readPracticePhotos().then(photos => {
+    practiceSlots.forEach(slot => loadPhoto(slot, photos[slot.dataset.photo]));
+  });
 })();
