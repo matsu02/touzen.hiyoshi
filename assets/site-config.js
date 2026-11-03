@@ -30,6 +30,7 @@ window.HIYOSHI_CONFIG = {
   legalUrl: 'tokushoho.html',
   photos: {
     hero: { src: 'assets/photos/hero.jpg', alt: '日吉同好会のイメージ', position: '50% 50%' },
+    // 独り・対人の候補は assets/photos/solo/・pair/ に追加。src は読込失敗時の予備画像。
     solo: { src: 'assets/photos/solo03.jpg', alt: '姿勢と動きを丁寧に確かめる独り稽古', position: '50% 50%' },
     pair: { src: 'assets/photos/duo.jpg', alt: '相手と力をやり取りしながら確かめる対人稽古', position: '50% 20%' },
     instructor: { src: 'assets/photos/instructor.png', alt: '刀禅日吉同好会主宰 松浦壮', position: '50% 35%' }

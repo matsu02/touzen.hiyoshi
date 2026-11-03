@@ -89,7 +89,9 @@ test('install precaches a bounded shell under the project path, without calendar
   await app.lifecycle('install');
   const keys = [...app.stores.values()][0].keys();
   const paths = [...keys];
-  assert.equal(paths.length, 19);
+  assert.equal(paths.length, 21);
+  assert.ok(paths.includes(`${appRoot}assets/practice-photo-data.js`));
+  assert.ok(paths.includes(`${appRoot}data/practice-photos.json`));
   assert.ok(paths.includes(`${appRoot}app.html`));
   assert.ok(paths.includes(`${appRoot}assets/qr/hiyoshi-schedule-iphone.png`));
   for (const path of paths) {
@@ -120,7 +122,7 @@ test('offline entry and guide work with the saved schedule QR image', async () =
 test('online config and scripts refresh their offline copies without growing query keys', async () => {
   const app = fixture();
   await app.lifecycle('install');
-  for (const path of ['assets/site-config.js', 'assets/announcement.js', 'assets/calendar-data.js', 'assets/style.css?v=next']) {
+  for (const path of ['assets/site-config.js', 'assets/practice-photo-data.js', 'data/practice-photos.json', 'assets/announcement.js', 'assets/calendar-data.js', 'assets/style.css?v=next']) {
     app.setContent(`updated:${path}`);
     const live = await app.request(path);
     assert.equal(await live.text(), `updated:${path}`);
@@ -129,7 +131,7 @@ test('online config and scripts refresh their offline copies without growing que
     assert.equal(await saved.text(), `updated:${path}`);
     app.setOffline(false);
   }
-  assert.equal([...app.stores.values()][0].size, 19);
+  assert.equal([...app.stores.values()][0].size, 21);
   const runtime = app.requests.filter(item => item.options);
   assert.ok(runtime.every(item => item.options.cache === 'no-cache'));
 });
