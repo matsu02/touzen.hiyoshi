@@ -1,6 +1,16 @@
 /* 自動生成。編集元は content/journals/YYYY.json。生成: node scripts/build-journals.mjs */
 window.HIYOSHI_JOURNAL = [
   {
+    "id": "2026-10-28",
+    "date": "2026-10-28",
+    "place": "日吉",
+    "category": "稽古の記録",
+    "photo": "",
+    "title": "いつもと違う稽古で、見えてくること。",
+    "excerpt": "総勢3名で、少し変わった要素を取り入れた稽古。丁寧に積み重ねていても、いつもと違う状況では昔の癖が顔を出します。時折変化を加えることの大切さを感じました。",
+    "href": "journal-2026.html#entry-2026-10-28"
+  },
+  {
     "id": "2026-10-20",
     "date": "2026-10-20",
     "place": "日吉",
