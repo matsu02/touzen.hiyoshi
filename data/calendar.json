@@ -1,33 +1,9 @@
 {
-  "updatedAt": "2026-10-14T01:44:30.866Z",
+  "updatedAt": "2026-11-05T02:38:20.812Z",
   "timeZone": "Asia/Tokyo",
-  "rangeStart": "2026-09-01",
-  "rangeEnd": "2027-11-01",
+  "rangeStart": "2026-10-01",
+  "rangeEnd": "2027-12-01",
   "events": [
-    {
-      "title": "綱島地区センター【刀禅日吉】",
-      "start": "2026-09-01",
-      "end": "2026-09-02",
-      "allDay": true,
-      "location": "",
-      "fee": ""
-    },
-    {
-      "title": "綱島地区センター【刀禅日吉】",
-      "start": "2026-09-15",
-      "end": "2026-09-16",
-      "allDay": true,
-      "location": "",
-      "fee": ""
-    },
-    {
-      "title": "日吉地区センター【刀禅日吉】",
-      "start": "2026-09-29",
-      "end": "2026-09-30",
-      "allDay": true,
-      "location": "",
-      "fee": ""
-    },
     {
       "title": "綱島地区センター【刀禅日吉】",
       "start": "2026-10-06",
@@ -112,6 +88,30 @@
       "title": "日吉地区センター【刀禅日吉】",
       "start": "2026-12-22",
       "end": "2026-12-23",
+      "allDay": true,
+      "location": "",
+      "fee": ""
+    },
+    {
+      "title": "(予定）綱島地区センター【刀禅日吉】",
+      "start": "2027-01-05",
+      "end": "2027-01-06",
+      "allDay": true,
+      "location": "",
+      "fee": ""
+    },
+    {
+      "title": "(予定)日吉地区センター【刀禅日吉】",
+      "start": "2027-01-13",
+      "end": "2027-01-14",
+      "allDay": true,
+      "location": "",
+      "fee": ""
+    },
+    {
+      "title": "(予定)日吉地区センター【刀禅日吉】",
+      "start": "2027-01-26",
+      "end": "2027-01-27",
       "allDay": true,
       "location": "",
       "fee": ""
